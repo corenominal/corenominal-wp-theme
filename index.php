@@ -20,3 +20,16 @@
  *
  * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
  */
+
+/**
+ * Pull in the header
+ */
+get_header();
+
+
+
+
+/**
+ * Pull in the footer
+ */
+get_footer();
