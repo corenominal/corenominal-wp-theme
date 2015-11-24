@@ -52,6 +52,9 @@ if ( have_posts() ) :
 
 		the_content();
 		
+		/**
+		 * Only show end section if last post
+		 */
 		if ( $i != sizeof( $posts ) )
 		{
 	     	echo '<p>&sect;</p>';
