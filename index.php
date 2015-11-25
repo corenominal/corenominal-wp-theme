@@ -59,10 +59,7 @@ if ( have_posts() ) :
 		{
 	     	echo '<p>&sect;</p>';
 		}
-		?>
-
-	
-<?php
+		
 	/**
 	 * End the loop
 	 */
