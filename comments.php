@@ -1,3 +1,8 @@
+<?php 
+/**
+ * The default comments template.
+ */
+?>
 &mdash;
 
 <h3><?php comments_number('', 'One comment', '% comments'); ?></h3>
