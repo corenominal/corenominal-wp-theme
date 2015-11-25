@@ -64,6 +64,11 @@ if ( have_posts() ) :
 	 * End the loop
 	 */
 	endwhile;
+?>
+
+<?php next_posts_link( '< Older posts' ); ?><br><?php previous_posts_link( 'Newer posts >' ); ?>
+
+<?php
 
 /**
  * We may not have any posts. Doh!
