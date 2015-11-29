@@ -4,4 +4,9 @@
  * smiley people, but emoji, eww!
  */
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+/**
+ * Add thumbnail/featued image support
+ */
+add_theme_support( 'post-thumbnails' );
