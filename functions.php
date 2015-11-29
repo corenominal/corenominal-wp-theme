@@ -5,6 +5,11 @@
  */
 
 /**
+ * Register navigation menus.
+ */
+require get_template_directory() . '/functions/menus.php';
+
+/**
  * Include random stuff that does not fit elsewhere.
  */
 require get_template_directory() . '/functions/misc.php';

@@ -20,4 +20,11 @@ require get_template_directory() . '/inc/meta.php';
 	
 	<p><strong><?php bloginfo('description'); ?></strong></p>
 
+	<?php
+	/**
+	 * The header menu
+	 */
+	wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
+	?>
+
 </header>
