@@ -5,6 +5,8 @@
 ?>
 &mdash;
 
+<section>
+
 <h3><?php comments_number('', 'One comment', '% comments'); ?></h3>
 
 
@@ -19,3 +21,5 @@
 </ol>
 
 <?php comment_form(); ?>
+
+</section>

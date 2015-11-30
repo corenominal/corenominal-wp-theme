@@ -20,16 +20,27 @@ if ( have_posts() ) :
 		the_post();
 ?>
 
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<small><?php the_date(); ?> - <?php the_time(); ?></small>
-		
-		<?php
+		<div class="h-entry post">
 
-		the_content();
+			<h1 class="p-name">
+				<?php the_title() ?>
+			</h1>
 		
-		comments_template();
+			<div class="e-content">
+				<?php the_content() ?>
+			</div>
 
-		?>
+			<footer>
+				<small>
+					<a class="u-url" href="<?php the_permalink(); ?>">
+						<?php the_time() ?>
+					</a>
+				</small>
+			</footer>
+				
+		</div>
+
+		<?php comments_template() ?>
 	
 <?php
 	/**

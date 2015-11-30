@@ -64,27 +64,32 @@ if ( have_posts() ) :
 		}
 ?>
 
-		<article>
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<article class="h-entry post">
+
+			<h2>
+				<a class="p-name u-url" href="<?php the_permalink(); ?>">
+					<?php the_title() ?>
+				</a>
+			</h2>
 		
+			<div class="e-content">
+				<?php the_content() ?>
+			</div>
+
 			<footer>
-				<small><?php the_time(); ?></small>
-			<footer>
+				<small><?php the_time() ?></small>
+			</footer>
+
 		</article>
 		
 		<?php
 
-		the_content();
+		
 		
 		/**
 		 * Only show end section if last post
 		 */
-		if ( $i != sizeof( $posts ) )
-		{
-	     	echo '<p>&sect;</p>';
-
-		}
-		else
+		if ( $i == sizeof( $posts ) )
 		{
 			echo "\n</section>\n";
 		}
@@ -95,7 +100,7 @@ if ( have_posts() ) :
 	endwhile;
 ?>
 
-<?php next_posts_link( '< Older posts' ); ?><br><?php previous_posts_link( 'Newer posts >' ); ?>
+<?php next_posts_link( '< Older posts' ) ?><br><?php previous_posts_link( 'Newer posts >' ) ?>
 
 <?php
 
