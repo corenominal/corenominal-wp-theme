@@ -37,16 +37,40 @@ if ( have_posts() ) :
 	$i = 0;
 
 	/**
+	 * Set $prev_date to null for tests in loop
+	 */
+	$prev_date = null;
+	
+	/**
+	 * Set-up first section
+	 */
+	echo '<section>';
+
+	/**
 	 * Start the loop
 	 */
 	while ( have_posts() ) :
 		the_post();
 		$i++;
+		$date = date( "F j, Y" , strtotime( $post->post_date ) );
+		if( $prev_date != $date )
+		{
+			if( $i > 1 )
+			{
+				echo "\n</section>\n<section>\n";
+			}
+			echo '<h1>' . $date . '</h1>';
+			$prev_date = $date;
+		}
 ?>
 
-		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<article>
+			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		
-		<small><?php the_date(); ?> - <?php the_time(); ?></small>
+			<footer>
+				<small><?php the_time(); ?></small>
+			<footer>
+		</article>
 		
 		<?php
 
@@ -58,6 +82,11 @@ if ( have_posts() ) :
 		if ( $i != sizeof( $posts ) )
 		{
 	     	echo '<p>&sect;</p>';
+
+		}
+		else
+		{
+			echo "\n</section>\n";
 		}
 		
 	/**
