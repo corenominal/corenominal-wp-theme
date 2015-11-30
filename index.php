@@ -77,7 +77,8 @@ if ( have_posts() ) :
 			</div>
 
 			<footer>
-				<small><?php the_time() ?></small>
+				<p class="meta">Posted @ <a href="<?php the_permalink(); ?>"><?php the_time() ?></a></p>
+				<p class="meta"><?php the_tags() ?></p>
 			</footer>
 
 		</article>

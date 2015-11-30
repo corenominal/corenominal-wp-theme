@@ -31,11 +31,9 @@ if ( have_posts() ) :
 			</div>
 
 			<footer>
-				<small>
-					<a class="u-url" href="<?php the_permalink(); ?>">
-						<?php the_time() ?>
-					</a>
-				</small>
+				<p class="meta">
+					<a class="u-url" href="<?php the_permalink(); ?>"><?php the_time() ?></a></p>
+					<p class="meta"><?php the_tags() ?></p>
 			</footer>
 				
 		</div>
