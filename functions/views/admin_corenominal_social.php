@@ -104,7 +104,7 @@ function corenominal_social_callback()
 	?>
 	<div class="wrap">
 
-		<h1>corenominal Theme &mdash; Social Accounts</h1>
+		<h1>corenominal Theme &mdash; Social Media Accounts</h1>
 
 		<p>List your social media accounts. These accounts will be linked to in various parts of the theme.</p>
 
