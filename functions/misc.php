@@ -19,3 +19,13 @@ function corenominal_excerpt_continue_reading( $more )
 	return ' &mdash; <a class="continue-reading" href="' . get_the_permalink() . '">continue reading&hellip;</a>';
 }
 add_filter('excerpt_more', 'corenominal_excerpt_continue_reading');
+
+/**
+ * Dump and die, a handy function for debugging. Idea pilfered from Laravel.
+ */
+function dd( $data )
+{
+	echo '<pre><code>';
+	var_dump( $data );
+	echo '</code></pre>';
+}
