@@ -40,7 +40,7 @@ if ( have_posts() ) :
 				
 				<p class="meta"><?php echo $date . ' '; the_time() ?></p>
 				
-				<?php if( get_option( 'corenominal_show_cats', 'true' ) == 'true' ): ?>
+				<?php if( get_option( 'corenominal_show_cats', 'false' ) == 'true' ): ?>
 				<p class="meta">Filed under: <?php the_category( ' ' ) ?></p>
 				<?php endif; ?>
 				
