@@ -23,6 +23,11 @@ function corenominal_general_settings()
 
 	register_setting(
 		'corenominal_general_group', // option group 
+		'corenominal_copyright_holder' // options name
+		);
+
+	register_setting(
+		'corenominal_general_group', // option group 
 		'corenominal_show_powered' // options name
 		);
 	
@@ -51,6 +56,14 @@ function corenominal_general_settings()
 		'corenominal-show-tags', // id
 		'Show tags', // title/label
 		'corenominal_show_tags', // callback
+		'corenominal', // page
+		'corenominal-general' // settings section 
+		);
+
+	add_settings_field(
+		'corenominal-copyright-holder', // id
+		'Copyright Holder', // title/label
+		'corenominal_copyright_holder', // callback
 		'corenominal', // page
 		'corenominal-general' // settings section 
 		);
@@ -88,6 +101,13 @@ function corenominal_show_tags()
 	$default = 'true';
 	$description = 'Show tags for posts, defaults to true.';
 	echo corenominal_options_select( $id, $options, $default, $description);
+}
+
+function corenominal_copyright_holder()
+{
+	$setting = esc_attr( get_option( 'corenominal_copyright_holder' ) );
+	echo '<input type="text" class="regular-text" name="corenominal_copyright_holder" value="'.$setting.'" placeholder="Joe Bloggs">';
+	echo '<p class="description">As appears in the site\'s footer. E.g. &copy; ' . date('Y') . ' Joe Bloggs.</p>';
 }
 
 function corenominal_show_powered()

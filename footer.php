@@ -10,7 +10,14 @@ wp_footer();
 ?>
 	<footer>
 		&mdash;&mdash;
-		<p>&copy; <?php echo date('Y'); ?> Philip Newborough.</p>
+		<?php
+		$copyright_holder = get_option( 'corenominal_copyright_holder', '' );
+		if($copyright_holder == '')
+		{
+			$copyright_holder = get_bloginfo( 'name' );
+		}
+		?>
+		<p>&copy; <?php echo date('Y') . ' ' . $copyright_holder ?>.</p>
 		<?php if( get_option( 'corenominal_show_powered', 'true' ) == 'true' ): ?>
 		<p>Proudly powered by <a href="http://wordpress.org/">WordPress</a>.</p>
 		<?php endif; ?>
