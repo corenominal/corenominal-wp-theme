@@ -29,3 +29,27 @@ function dd( $data )
 	var_dump( $data );
 	echo '</code></pre>';
 }
+
+/**
+ * Produces select for options
+ */
+function corenominal_options_select( $id, $options, $default, $description = '' )
+{
+	$setting = get_option( $id, $default );
+	$html = '<select name="'.$id.'">';
+        foreach ( $options as $option )
+        {
+        	$selected = '';
+        	if ( $option == $setting )
+        	{
+        		$selected = ' selected="selected"';
+        	}
+        	$html .= '<option value="'.$option.'"'.$selected.'>'.$option.'</option>';
+        }
+	$html .= '</select>';
+	if($description != '')
+	{
+    	$html .= '<p class="description">' . $description . '</p>';
+    }
+    return $html;
+}

@@ -15,6 +15,11 @@ require get_template_directory() . '/functions/menus.php';
 require get_template_directory() . '/functions/misc.php';
 
 /**
- * Include random stuff that does not fit elsewhere.
+ * Metadata function, twitter cards, open graph etc.
  */
 require get_template_directory() . '/functions/metadata.php';
+
+/**
+ * Theme admin stuff.
+ */
+require get_template_directory() . '/functions/admin.php';

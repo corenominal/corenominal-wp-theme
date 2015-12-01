@@ -77,8 +77,17 @@ if ( have_posts() ) :
 			</div>
 
 			<footer>
+				
 				<p class="meta">Posted @ <a href="<?php the_permalink(); ?>"><?php the_time() ?></a></p>
+				
+				<?php if( get_option( 'corenominal_show_cats', 'true' ) == 'true' ): ?>
+				<p class="meta">Filed under: <?php the_category( ' ' ) ?></p>
+				<?php endif; ?>
+				
+				<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 				<p class="meta"><?php the_tags() ?></p>
+				<?php endif; ?>
+			
 			</footer>
 
 		</article>
