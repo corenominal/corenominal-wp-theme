@@ -46,6 +46,11 @@ function corenominal_admin_menu()
 		'corenominal_social', // slug
 		'corenominal_social_callback' // callback function
 	 	);
+
+	/**
+	 * Activate social options 
+	 */
+	add_action( 'admin_init', 'corenominal_social_settings' );
 }
 add_action( 'admin_menu', 'corenominal_admin_menu' );
 
