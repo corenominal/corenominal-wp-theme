@@ -10,3 +10,12 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
  * Add thumbnail/featued image support
  */
 add_theme_support( 'post-thumbnails' );
+
+/**
+ * A nicer excerpt?
+ */
+function corenominal_excerpt_continue_reading( $more )
+{
+	return ' &mdash; <a class="continue-reading" href="' . get_the_permalink() . '">continue reading&hellip;</a>';
+}
+add_filter('excerpt_more', 'corenominal_excerpt_continue_reading');
