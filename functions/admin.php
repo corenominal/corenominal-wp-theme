@@ -51,6 +51,24 @@ function corenominal_admin_menu()
 	 * Activate social options 
 	 */
 	add_action( 'admin_init', 'corenominal_social_settings' );
+
+	/**
+	 * Third submenu item
+	 */
+	add_submenu_page( 
+		'corenominal', // parent slug
+		'Metadata', // page title
+		'Metadata', // menu title
+		'manage_options', // capability
+		'corenominal_metadata', // slug
+		'corenominal_metadata_callback' // callback function
+	 	);
+
+	/**
+	 * Activate metadata options 
+	 */
+	add_action( 'admin_init', 'corenominal_metadata_settings' );
+
 }
 add_action( 'admin_menu', 'corenominal_admin_menu' );
 
@@ -63,3 +81,8 @@ require get_template_directory() . '/functions/views/admin_corenominal.php';
  * corenominal_social_callback()
  */
 require get_template_directory() . '/functions/views/admin_corenominal_social.php';
+
+/**
+ * corenominal_metadata_callback()
+ */
+require get_template_directory() . '/functions/views/admin_corenominal_metadata.php';

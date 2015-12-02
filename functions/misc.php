@@ -28,6 +28,7 @@ function dd( $data )
 	echo '<pre><code>';
 	var_dump( $data );
 	echo '</code></pre>';
+    exit;
 }
 
 /**
