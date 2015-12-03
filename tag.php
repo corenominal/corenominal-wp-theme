@@ -11,7 +11,7 @@ get_header();
 /**
  * Show which tag we are dealing with
  */
-echo '<h1 class="tag-title">Tags: ' . single_tag_title( '', false ) . '</h1>';
+echo '<h1 class="taxonomy-title">Tag: ' . single_tag_title( '', false ) . '</h1>';
 
 /**
  * Sanity check
