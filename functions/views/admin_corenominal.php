@@ -145,5 +145,3 @@ function corenominal_admin_callback()
 	</div>
 	<?php
 }
-?>
-

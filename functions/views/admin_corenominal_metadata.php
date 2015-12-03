@@ -32,7 +32,7 @@ function corenominal_metadata_settings()
 	add_settings_section(
 		'corenominal-metadata', // id
 		'Metadata Theme Options', // title
-		'corenominal_metadata', // callback
+		'corenominal_metadata_section', // callback
 		'corenominal_metadata' // page
 		);
 	
@@ -68,7 +68,7 @@ function corenominal_metadata_settings()
 /**
  * The callbacks
  */
-function corenominal_metadata()
+function corenominal_metadata_section()
 {
 	return;
 }
@@ -146,5 +146,3 @@ function corenominal_metadata_callback()
 	</div>
 	<?php
 }
-?>
-
