@@ -36,7 +36,7 @@ function corenominal_admin_menu()
 	add_action( 'admin_init', 'corenominal_general_settings' );
 
 	/**
-	 * Second submenu item
+	 * Social media accounts submenu item
 	 */
 	add_submenu_page( 
 		'corenominal', // parent slug
@@ -53,7 +53,7 @@ function corenominal_admin_menu()
 	add_action( 'admin_init', 'corenominal_social_settings' );
 
 	/**
-	 * Third submenu item
+	 * Metadata settings submenu item
 	 */
 	add_submenu_page( 
 		'corenominal', // parent slug
@@ -68,6 +68,23 @@ function corenominal_admin_menu()
 	 * Activate metadata options 
 	 */
 	add_action( 'admin_init', 'corenominal_metadata_settings' );
+
+	/**
+	 * API key submenu item
+	 */
+	add_submenu_page( 
+		'corenominal', // parent slug
+		'API Key', // page title
+		'API Key', // menu title
+		'manage_options', // capability
+		'corenominal_apikey', // slug
+		'corenominal_apikey_callback' // callback function
+	 	);
+
+	/**
+	 * Activate apikey options 
+	 */
+	add_action( 'admin_init', 'corenominal_apikey_settings' );
 
 }
 add_action( 'admin_menu', 'corenominal_admin_menu' );
@@ -86,3 +103,8 @@ require get_template_directory() . '/functions/views/admin_corenominal_social.ph
  * corenominal_metadata_callback()
  */
 require get_template_directory() . '/functions/views/admin_corenominal_metadata.php';
+
+/**
+ * corenominal_apikey_callback()
+ */
+require get_template_directory() . '/functions/views/admin_corenominal_apikey.php';
