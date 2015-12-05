@@ -54,6 +54,9 @@ if ( have_posts() ) :
 	 */
 	endwhile;
 
+
+get_sidebar();
+
 /**
  * We may not have any posts. Doh!
  */

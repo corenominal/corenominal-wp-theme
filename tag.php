@@ -60,6 +60,9 @@ if ( have_posts() ) :
 	endwhile;
 ?>
 
+
+<?php get_sidebar() ?>
+
 <?php next_posts_link( '< Older posts' ) ?><br><?php previous_posts_link( 'Newer posts >' ) ?>
 
 <?php
