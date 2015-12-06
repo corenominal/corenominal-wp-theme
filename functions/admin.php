@@ -1,5 +1,11 @@
 <?php
 /**
+ * Custom post types and taxonomies
+ */
+require get_template_directory() . '/functions/custom_post_type_link.php';
+require get_template_directory() . '/functions/custom_taxonomy_link_tag.php';
+
+/**
  * Theme's admin menu
  */
 
