@@ -137,3 +137,12 @@ function corenominal_metabox_link_enqueue_scripts( $hook )
 	}
 }
 add_action( 'admin_enqueue_scripts', 'corenominal_metabox_link_enqueue_scripts' );
+
+/**
+ * Return the link in template files
+ */
+function corenominal_the_link( $postid )
+{
+	$the_link = get_post_custom_values('the_link', $postid);
+	echo $the_link[0];
+}

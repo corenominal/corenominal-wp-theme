@@ -42,3 +42,11 @@ function corenominal_register_taxonomy_link_tag()
 }
 
 add_action( 'init', 'corenominal_register_taxonomy_link_tag' );
+
+/**
+ * Function to return the tags within template files
+ */
+function corenominal_the_link_tags( $postid )
+{
+   the_terms( $postid, 'link_tag', 'Tags: ', ', ', ' ' );
+}
