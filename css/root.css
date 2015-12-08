@@ -140,7 +140,9 @@ a:hover {
 	max-width: 180px;
 	background: #fff;
 	padding: 10px;
+	padding-bottom: 6px; /** weird, needs fix */
 	border-radius: 5px;
+	border: 1px solid #e1e8ed;
 }
 
 .bio-img img {
