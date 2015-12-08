@@ -129,9 +129,24 @@ a:hover {
 }
 
 .bio {
+	margin-top: -100px;
 	margin-right: 20px;
 	font-size: 13px;
 	line-height: 1.4em;
+}
+
+.bio-img {
+	margin-bottom: 20px;
+	max-width: 180px;
+	background: #fff;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.bio-img img {
+	padding: 0;
+	margin: 0;
+	max-width: 180px;
 }
 
 .bio h2 {
@@ -162,7 +177,7 @@ a:hover {
 	margin-bottom: 6px;
 }
 
-.bio .social-media-accounts i {
+.bio i {
 	width:18px;
 }
 

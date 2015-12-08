@@ -42,6 +42,23 @@ function corenominal_admin_menu()
 	add_action( 'admin_init', 'corenominal_general_settings' );
 
 	/**
+	 * Bio submenu item
+	 */
+	add_submenu_page( 
+		'corenominal', // parent slug
+		'Bio', // page title
+		'Bio', // menu title
+		'manage_options', // capability
+		'corenominal_bio', // slug
+		'corenominal_bio_callback' // callback function
+	 	);
+
+	/**
+	 * Activate bio options 
+	 */
+	add_action( 'admin_init', 'corenominal_bio_settings' );
+
+	/**
 	 * Social media accounts submenu item
 	 */
 	add_submenu_page( 
@@ -99,6 +116,11 @@ add_action( 'admin_menu', 'corenominal_admin_menu' );
  * corenominal_admin_callback()
  */
 require get_template_directory() . '/functions/views/admin_corenominal.php';
+
+/**
+ * corenominal_bio_callback()
+ */
+require get_template_directory() . '/functions/views/admin_corenominal_bio.php';
 
 /**
  * corenominal_social_callback()

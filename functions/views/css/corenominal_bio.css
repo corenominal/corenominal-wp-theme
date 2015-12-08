@@ -1,0 +1,13 @@
+.img-preview {
+	margin-bottom: 20px;
+	max-width: 180px;
+	background: #fff;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.img-preview img {
+	padding: 0;
+	margin: 0;
+	max-width: 180px;
+}

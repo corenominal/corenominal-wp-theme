@@ -33,14 +33,41 @@ require get_template_directory() . '/inc/meta.php';
 
 	<div class="bio-wrapper">
 		<div class="bio">
-			<h2>Philip Newborough</h2>
+			
+			<?php
+			$displayname = get_option( 'corenominal_bio_displayname', 'Joe Bloggs' );
+			$bioimg = get_option( 'corenominal_bio_img', '' );
+			if( $bioimg == '' ):
+				$bioimg = get_template_directory_uri() . '/img/default-bio-image.png';
+			endif;
+			echo '<div class="bio-img"><img src="' . $bioimg . '" alt="' . $displayname . '"></div>';
+			
+			echo '<h2>' . $displayname . '</h2>';
+			?>
+
 			<?php
 			$twitter = get_option( 'corenominal_twitter_username', '' );
 			if( $twitter != '' ):
 			?>
 			<h3>@<a target="_blank" href="https://twitter.com/<?php echo $twitter; ?>"><?php echo $twitter; ?></a></h3>
 			<?php endif; ?>
-			<p>Interested in all things, but especially code, design, Linux, OS X, WordPress, pixies &amp; robots.</p>
+			
+			<?php
+			$description = get_option( 'corenominal_bio_description', '' );
+			if( $description == '' ):
+				$description = 'Just another WordPress user, nothing to say here, please move along.';
+			endif;
+			echo '<p>' . $description . '</p>';
+			?>
+
+			<?php
+			$location = get_option( 'corenominal_bio_location', '' );
+			if( $location == '' ):
+				$location = 'Planet Earth';
+			endif;
+			echo '<p class="location"><i class="fa fa-map-marker"></i> ' . $location . '</p>';
+			?>			
+
 			<ul class="social-media-accounts">
 				
 				<?php
