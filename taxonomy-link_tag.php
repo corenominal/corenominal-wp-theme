@@ -7,7 +7,11 @@
  * Pull in the header
  */
 get_header();
+?>
 
+<div class="the-content">
+
+<?php
 /**
  * Show which tag we are dealing with
  */
@@ -26,7 +30,7 @@ if ( have_posts() ) :
 		$date = date( "F j, Y" , strtotime( $post->post_date ) );
 ?>
 
-		<article class="h-entry post-summary">
+		<article class="h-entry post post-summary">
 
 			<h2>
 				<a class="p-name u-url" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
@@ -38,7 +42,7 @@ if ( have_posts() ) :
 
 			<footer>
 				
-				<p class="meta"><?php echo $date . ' '; the_time() ?></p>
+				<p class="meta"><?php echo '<i class="fa fa-calendar"></i> ' . $date . '&nbsp;&nbsp;&nbsp;<i class="fa fa-clock-o"></i> '; the_time() ?></p>
 				
 				<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 				<p class="meta"><?php corenominal_the_link_tags( $post->ID ) ?></p>
@@ -56,10 +60,20 @@ if ( have_posts() ) :
 	endwhile;
 ?>
 
+<?php if( get_next_posts_link() || get_previous_posts_link() ): ?>
+<div class="pager">
+	<div class="next_posts_link">
+		<?php next_posts_link( '<i class="fa fa-chevron-left"></i> Older Posts' ) ?>
+	</div>
+	<div class="previous_posts_link">
+		<?php previous_posts_link( 'Newer Posts <i class="fa fa-chevron-right"></i>' ) ?>
+	</div>
+</div>
+<?php endif; ?>
+
+</div> <!-- the_content -->
 
 <?php get_sidebar() ?>
-
-<?php next_posts_link( '< Older posts' ) ?><br><?php previous_posts_link( 'Newer posts >' ) ?>
 
 <?php
 

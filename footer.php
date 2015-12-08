@@ -8,8 +8,7 @@
 wp_footer();
 
 ?>
-	<footer>
-		&mdash;&mdash;
+	<footer class="footer-main">
 		<?php
 		$copyright_holder = get_option( 'corenominal_copyright_holder', '' );
 		if($copyright_holder == '')
@@ -22,6 +21,8 @@ wp_footer();
 		<p>Proudly powered by <a href="http://wordpress.org/">WordPress</a>.</p>
 		<?php endif; ?>
 	</footer>
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/root.js"></script>
-	</body>
+</div> <!-- content-wrapper -->
+</div> <!-- page-wrapper -->
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/root.js"></script>
+</body>
 </html>

@@ -7,7 +7,11 @@
  * Pull in the header
  */
 get_header();
+?>
 
+<div class="the-content">
+
+<?php
 /**
  * Sanity check
  */
@@ -24,7 +28,7 @@ if ( have_posts() ) :
 
 			<h1 class="p-name">
 				<a href="<?php corenominal_the_link( $post->ID ) ?>" target="_blank">
-				<?php the_title() ?>
+				<?php the_title() ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-external-link"></i>
 				</a>
 			</h1>
 		
@@ -34,7 +38,7 @@ if ( have_posts() ) :
 
 			<footer>
 				
-				<p class="meta"><a class="u-url" href="<?php the_permalink(); ?>"><?php the_time() ?></a></p>
+				<p class="meta"><a class="u-url" href="<?php the_permalink(); ?>"><i class="fa fa-calendar"></i>  <?php the_date() ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time() ?></a></p>
 				
 				<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 				<p class="meta"><?php corenominal_the_link_tags( $post->ID ) ?></p>
@@ -51,8 +55,11 @@ if ( have_posts() ) :
 	 * End the loop
 	 */
 	endwhile;
+?>
 
+</div> <!-- the_content -->
 
+<?php
 get_sidebar();
 
 /**

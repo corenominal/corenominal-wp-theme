@@ -48,5 +48,5 @@ add_action( 'init', 'corenominal_register_taxonomy_link_tag' );
  */
 function corenominal_the_link_tags( $postid )
 {
-   the_terms( $postid, 'link_tag', 'Tags: ', ', ', ' ' );
+   the_terms( $postid, 'link_tag', '<i class="fa fa-tags"></i> <span class="sr-only">Tags: </span>', ', ', ' ' );
 }

@@ -21,7 +21,7 @@ function corenominal_admin_menu()
 		'corenominal', // slug
 		'corenominal_admin_callback', // callback
 		'dashicons-admin-generic', // icon 
-		60 //position
+		61 //position
 		);
 
 	/**
