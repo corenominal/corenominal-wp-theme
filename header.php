@@ -88,7 +88,7 @@ require get_template_directory() . '/inc/meta.php';
 				$facebook = get_option( 'corenominal_facebook_username', '' );
 				if( $facebook != '' ):
 				?>
-					<li><i class="fa fa-facebook"></i> <a target="_blank" href="https://facebook.com/<?php echo $facebook; ?>">Follow me on GitHub</a></li>
+					<li><i class="fa fa-facebook"></i> <a target="_blank" href="https://facebook.com/<?php echo $facebook; ?>">Friend me on Facebook</a></li>
 				<?php endif; ?>
 			</ul>
 		</div>
