@@ -38,8 +38,8 @@ require get_template_directory() . '/inc/meta.php';
 				$count_posts = wp_count_posts( 'link' );
 				$published_links = $count_posts->publish;
 			?>
-			<li><a href="">Posts<br><span class="count"><?php echo $published_posts ?></span></a></li>
-			<li><a href="">Links<br><span class="count"><?php echo $published_links ?></span></a></li>
+			<li><a <?php if( is_home() ) echo 'class="active"'; ?> href="<?php echo site_url(); ?>">Posts<br><span class="count"><?php echo $published_posts ?></span></a></li>
+			<li><a <?php if( is_post_type_archive( 'link' ) ) echo 'class="active"'; ?> href="<?php echo site_url('link'); ?>">Links<br><span class="count"><?php echo $published_links ?></span></a></li>
 		</ul>
 	</div>
 </nav>

@@ -54,6 +54,7 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	background: #f5f8fa;
 	color: #292f33;
+	overflow-y: scroll;
 }
 
 .page-wrapper {
@@ -133,6 +134,10 @@ body {
 
 .content-menu ul li a:hover {
 	color: #f6271a;
+	border-bottom: 4px solid #f6271a;
+}
+
+.content-menu ul li a.active {
 	border-bottom: 4px solid #f6271a;
 }
 

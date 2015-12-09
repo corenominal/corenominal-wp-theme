@@ -33,7 +33,9 @@ if ( have_posts() ) :
 		<article class="h-entry post post-summary">
 
 			<h2>
-				<a class="p-name u-url" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+				<a class="p-name" href="<?php corenominal_the_link( $post->ID ) ?>" target="_blank">
+					<?php the_title() ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-external-link"></i>
+				</a>
 			</h2>
 		
 			<div class="p-description">
@@ -42,7 +44,11 @@ if ( have_posts() ) :
 
 			<footer>
 				
-				<p class="meta"><?php echo '<i class="fa fa-calendar"></i> ' . $date . '&nbsp;&nbsp;&nbsp;<i class="fa fa-clock-o"></i> '; the_time() ?></p>
+				<p class="meta">
+					<a class="u-url" href="<?php the_permalink(); ?>">
+					<?php echo '<i class="fa fa-calendar"></i> ' . $date . '&nbsp;&nbsp;&nbsp;<i class="fa fa-clock-o"></i> '; the_time() ?>
+					</a>
+				</p>
 				
 				<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 				<p class="meta"><?php corenominal_the_link_tags( $post->ID ) ?></p>
