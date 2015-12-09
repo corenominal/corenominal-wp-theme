@@ -227,7 +227,8 @@ a:hover {
 	width:18px;
 }
 
-.post {
+.post,
+.comments {
 	border-radius: 5px;
 	padding-top: 20px;
 	padding-right: 20px;
@@ -307,6 +308,79 @@ a:hover {
 .post footer p.meta {
 	font-size: 13px;
 	margin-bottom: 0;
+}
+
+.comment {
+	border-bottom: 1px solid #e1e8ed;
+	margin-bottom: 20px;
+	position: relative;
+	padding-left: 62px;
+}
+
+.comment .avatar {
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+.commentmetadata {
+	color: #8899A6;
+	font-size: 13px;
+}
+
+.commentmetadata a {
+	color: #8899A6;
+}
+
+.commentmetadata a:hover {
+	color: #46a6f2;
+}
+
+.comments label {
+	display:block;
+	color: #8899a6;
+}
+
+.comments textarea,
+.comments input[type="text"] {
+	border: 1px solid #8899a6;
+	color: #292f33;
+	border-radius: 5px;
+	width: 96%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 2%;
+	padding-right: 2%;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.comments textarea:focus,
+.comments input[type="text"]:focus {
+	border: 1px solid #46a6f2;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.comment-submit {
+	color: #fff;
+	background: #f6271a;
+	border: 0;
+	text-align: center;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	border-radius: 5px;
+	width: 100%;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.comment-submit:hover {
+	background: #46a6f2;
+	cursor: pointer;
 }
 
 .pager {

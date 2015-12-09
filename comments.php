@@ -3,9 +3,8 @@
  * The default comments template.
  */
 ?>
-&mdash;
 
-<section>
+<section class="comments">
 
 <h3><?php comments_number('', 'One comment', '% comments'); ?></h3>
 

@@ -10,3 +10,16 @@
  *   Twitter: @corenominal
  *   From: Lincoln, United Kingdom
  */
+jQuery( document ).ready( function( $ ){
+	
+	/**
+	 * Add a nice icon to "Post Comment" button.
+	 * Note: there is probably an easier way to do this.
+	 */
+	$('.form-submit #submit').remove();
+	var str = '<button class="comment-submit" id="submit" name="submit">';
+	str += '<i class="fa fa-share"></i> Post Comment';
+	str += '</button>';
+	$('.form-submit').append(str);
+
+});
