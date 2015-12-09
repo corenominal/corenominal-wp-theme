@@ -25,9 +25,24 @@ require get_template_directory() . '/inc/meta.php';
 			wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
 			?>
 		</div>
-	</nav>
+	</nav>	
 
 </header>
+
+<nav class="content-menu">
+	<div class="container">
+		<ul>
+			<?php
+				$count_posts = wp_count_posts( 'post' );
+				$published_posts = $count_posts->publish;
+				$count_posts = wp_count_posts( 'link' );
+				$published_links = $count_posts->publish;
+			?>
+			<li><a href="">Posts<br><span class="count"><?php echo $published_posts ?></span></a></li>
+			<li><a href="">Links<br><span class="count"><?php echo $published_links ?></span></a></li>
+		</ul>
+	</div>
+</nav>
 
 <div class="container content-wrapper">
 

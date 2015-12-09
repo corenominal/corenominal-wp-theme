@@ -104,6 +104,45 @@ body {
 	border-bottom: 4px solid #f6271a;
 }
 
+.content-menu {
+	width:100%;
+	margin-bottom: 20px;
+	background: #fff;
+	border-bottom: 1px solid #e1e8ed;
+}
+
+.content-menu ul {
+	margin-left: 25%;
+	margin-bottom: 0;
+}
+
+.content-menu ul li {
+	display: inline-block;
+}
+
+.content-menu ul li a {
+	display: block;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	margin-right: 30px;
+	border-bottom: 4px solid #fff;
+	text-align: center;
+}
+
+.content-menu ul li a:hover {
+	color: #f6271a;
+	border-bottom: 4px solid #f6271a;
+}
+
+.content-menu .count {
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 6px;
+	display: block;
+}
+
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, pre {
 	margin-bottom: 20px;
 }
@@ -129,7 +168,7 @@ a:hover {
 }
 
 .bio {
-	margin-top: -100px;
+	margin-top: -160px;
 	margin-right: 20px;
 	font-size: 13px;
 	line-height: 1.4em;
