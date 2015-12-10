@@ -23,3 +23,8 @@ require get_template_directory() . '/functions/metadata.php';
  * Theme admin stuff.
  */
 require get_template_directory() . '/functions/admin.php';
+
+/**
+ * Widgets FTW!
+ */
+require get_template_directory() . '/functions/widgets.php';

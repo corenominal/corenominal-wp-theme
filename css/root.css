@@ -62,8 +62,8 @@ body {
 }
 
 .masthead {
-	height: 200px;
-	background: #f5f8fa;
+	height: 260px;
+	background: #222;
 }
 
 .masthead h1,
@@ -78,7 +78,10 @@ body {
 	left: 0;
 	width: 100%;
 	background: #fff;
-	border-bottom: 1px solid #e1e8ed;
+	border-bottom: 0px solid #e1e8ed;
+	-webkit-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+	-moz-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+	box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
 }
 
 .menu-main-navigation-menu-container ul {
@@ -126,7 +129,7 @@ body {
 	display: block;
 	padding-top: 10px;
 	padding-right: 10px;
-	padding-bottom: 6px;
+	padding-bottom: 4px;
 	padding-left: 10px;
 	margin-right: 30px;
 	border-bottom: 4px solid #fff;
@@ -174,7 +177,7 @@ a:hover {
 }
 
 .bio {
-	margin-top: -160px;
+	margin-top: -200px;
 	margin-right: 20px;
 	font-size: 13px;
 	line-height: 1.4em;
@@ -244,6 +247,12 @@ a:hover {
 .post h1, .post h2 {
 	padding-bottom: 10px;
 	border-bottom: 1px solid #e1e8ed;
+	line-height: 1.44em;
+}
+
+.post h1 i, .post h2 i {
+	font-size: 20px;
+	display:inline-block;
 }
 
 .post img {
@@ -252,7 +261,24 @@ a:hover {
 	height: auto;
 }
 
-.post blockquote {
+.post ol,
+.post ul,
+.comment ol,
+.comment ul {
+	margin-left: 20px;
+}
+
+.post ul li,
+.comment ul li {
+	list-style-type: square;
+}
+
+.post ol li,
+.comment ol li {
+	list-style-type: decimal;
+}
+
+blockquote {
 	border-left: 4px solid #8899A6;
 	padding-left: 20px;
 	margin-left: 20px;
@@ -262,19 +288,19 @@ a:hover {
 	line-height: 1.4em;
 }
 
-.post code,kbd,pre,samp{
+code,kbd,pre,samp{
 	font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 	font-size:1em
 }
 
-.post code {
+code {
 	font-size:14px;
 	background-color:#efefef;
 	border:none;
 	white-space:nowrap;
 }
 
-.post pre {
+pre {
 	white-space:pre;
 	white-space:pre-wrap;
 	font-size:14px;
@@ -286,7 +312,7 @@ a:hover {
 	padding:5px 10px;
 }
 
-.post pre code {
+pre code {
 	background:transparent;
 	border:none;
 	white-space:pre;
@@ -311,7 +337,7 @@ a:hover {
 	margin-bottom: 0;
 }
 
-.comment {
+.comments .comment {
 	border-bottom: 1px solid #e1e8ed;
 	margin-bottom: 20px;
 	position: relative;
@@ -322,6 +348,7 @@ a:hover {
 	position: absolute;
 	top:0;
 	left:0;
+	border-radius: 5px;
 }
 
 .commentmetadata {
@@ -414,16 +441,36 @@ a:hover {
 
 .sidebar .aside {
 	border-radius: 5px;
-	padding-top: 10px;
-	padding-right: 10px;
+	padding-top: 20px;
+	padding-right: 20px;
 	padding-bottom: 10px;
-	padding-left: 10px;
+	padding-left: 20px;
 	margin-bottom: 10px;
 	margin-left: 10px;
 	background: #fff;
 	border: 1px solid #e1e8ed;
 	line-height: 1.4em;
 	font-size: 13px;
+	color:#66757F;
+}
+
+.sidebar h4 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.sidebar p {
+	margin-bottom: 10px;
+}
+
+.sidebar li {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #e1e8ed;
+}
+
+.sidebar li .meta {
+	color: #8899A6;
 }
 
 .footer-main {

@@ -60,7 +60,7 @@ if ( have_posts() ) :
 </div> <!-- the_content -->
 
 <?php
-get_sidebar();
+get_sidebar('link');
 
 /**
  * We may not have any posts. Doh!
