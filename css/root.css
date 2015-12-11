@@ -103,7 +103,7 @@ body {
 
 .main-menu {
 	position: fixed;
-	z-index: 9999;
+	z-index: 9900;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -493,7 +493,6 @@ pre code {
 .menu-main-navigation-menu-container ul {
 	margin-bottom: 20px;
 	width: 100%;
-	z-index: 9999;
 }
 
 .menu-main-navigation-menu-container li {
@@ -519,6 +518,10 @@ pre code {
 }
 .search-masthead input {
 	width:80%;
+}
+
+.content-wrapper {
+	position: relative;
 }
 
 .container {
@@ -610,7 +613,7 @@ pre code {
 		left:0;
 		height: 60px;
 		width: 100%;
-		z-index: 9980;
+		z-index: 9000;
 	}
 
 	.menu-main-navigation-menu-container ul {
@@ -650,7 +653,7 @@ pre code {
 		width: 100%;
 		margin-top: 60px;
 		border-bottom: 0px solid #e1e8ed;
-		z-index: 9990;
+		z-index: 9100;
 		-webkit-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
 		-moz-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
 		box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
@@ -674,10 +677,9 @@ pre code {
 
 	.bio-fixed {
 		position:fixed;
-		top: 200;
-		padding-top: 280px;
+		top: 280px;
 		width: 208px;
-		z-index: 9990;
+		z-index: 9500;
 	}
 	
 	.bio {

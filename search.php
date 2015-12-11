@@ -74,7 +74,6 @@ if ( have_posts() ) :
 					<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 					<p class="meta"><?php corenominal_the_link_tags( $post->ID ) ?></p>
 					<?php endif; ?>
-				<?php endif; ?>
 				<?php
 				endif;
 				if( $post->post_type == 'snippet' ):
