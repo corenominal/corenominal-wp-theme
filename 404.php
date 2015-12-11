@@ -11,7 +11,7 @@ get_header();
 ?>
 <div class="the-content">
 	<div class="post">
-		<h2>404 Not Found!</h2>
+		<h1>404 Not Found!</h1>
 		<p>
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/ohnoes.png" alt="Oh Noes!">
 		</p>

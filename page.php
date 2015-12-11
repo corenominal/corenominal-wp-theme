@@ -8,6 +8,10 @@
  */
 get_header();
 
+?>
+<div class="the-content">
+
+<?php
 /**
  * Sanity check
  */
@@ -19,16 +23,24 @@ if ( have_posts() ) :
 	while ( have_posts() ) :
 		the_post();
 ?>
-
+	<div class="post">
 		<h1><?php the_title() ?></h1>
 		
 		<?php the_content() ?>
-	
+
+	</div>
+
 <?php
 	/**
 	 * End the loop
 	 */
 	endwhile;
+?>
+
+</div> <!-- the_content -->
+
+<?php
+get_sidebar('link');
 
 /**
  * We may not have any posts. Doh!
@@ -43,3 +55,5 @@ endif;
  * Pull in the footer
  */
 get_footer();
+
+		
