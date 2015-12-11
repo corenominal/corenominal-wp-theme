@@ -120,21 +120,31 @@ if ( have_posts() ) :
 </div>
 <?php endif; ?>
 
-</div> <!-- the_content -->
-
-<?php get_sidebar('link') ?>
-
 <?php
-
 /**
  * We may not have any posts. Doh!
  */
 else :
 
-	echo 'Oops, it looks like something went horribly wrong.';
+	?>
+		
+		<div class="post">
+			<h2>There Is Nothing Here!</h2>
+			<p>
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/ohnoes.png" alt="Oh Noes!">
+			</p>
+		</div>
+
+	<?php
 
 endif;
+?>
 
+</div> <!-- the_content -->
+
+<?php get_sidebar( 'link' ) ?>
+
+<?php
 /**
  * Pull in the footer
  */

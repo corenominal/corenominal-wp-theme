@@ -124,9 +124,6 @@ endif;
 <?php get_sidebar() ?>
 
 <?php
-
-
-
 /**
  * Pull in the footer
  */
