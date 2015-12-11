@@ -170,6 +170,10 @@ a:hover {
 	color: #46a6f2;
 }
 
+/** {
+	transition: all 0.25s ease;
+}*/
+
 .taxonomy-title,
 .section-title {
 	color: #8899A6;
@@ -599,6 +603,14 @@ pre code {
 		height: 260px;
 	}
 
+	.masthead-fixed {
+		position:fixed;
+		top:0;
+		left:0;
+		height: 60px;
+		width: 100%;
+	}
+
 	.menu-main-navigation-menu-container ul {
 		margin-bottom: 0;
 		width: 60%;
@@ -629,6 +641,18 @@ pre code {
 		text-align: left;
 	}
 
+	.content-menu-fixed {
+		position: fixed;
+		top: 200;
+		left: 0;
+		width: 100%;
+		margin-top: 60px;
+		border-bottom: 0px solid #e1e8ed;
+		-webkit-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+		-moz-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+		box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+	}
+
 	.content-menu ul {
 		margin-left: 25%;
 		margin-bottom: 0;
@@ -645,6 +669,13 @@ pre code {
 		text-align: left;
 	}
 
+	.bio-fixed {
+		position:fixed;
+		top: 200;
+		padding-top: 280px;
+		width: 208px;
+	}
+	
 	.bio {
 		margin-top: -200px;
 		margin-right: 20px;
@@ -658,9 +689,14 @@ pre code {
   	.container {
 		width: 912px;
 	}
+	
 	.the-content {
 		width: 75%;
 		float: left;
+	}
+
+	.the-content-fixed {
+		padding-top:360px;
 	}
 }
 
@@ -668,9 +704,15 @@ pre code {
   	.container {
 		width: 1190px;
 	}
+	
+	.bio-fixed {
+		width: 278px;
+	}
+
 	.the-content {
 		width: 50%;
 	}
+
   	.sidebar {
     	display: block;
     	float: left;

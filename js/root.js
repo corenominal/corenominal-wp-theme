@@ -57,8 +57,8 @@ jQuery( document ).ready( function( $ ){
 
 	// fugly
 	$( window ).resize(function() {
-		var len = $( window ).innerWidth();
-		if( len > 940 )
+		var width = $( window ).innerWidth();
+		if( width > 940 )
 		{
 			$( '.menu-collapse' ).show();
 		}
@@ -126,5 +126,28 @@ jQuery( document ).ready( function( $ ){
 			e.preventDefault();
 		}
 	});
+
+	/**
+	 * Scrolly stuff
+	 */
+	$( document ).scroll( function()
+	{
+    	var top = $( document ).scrollTop();
+    	var width = $( window ).innerWidth();
+		if( width > 940 && top > 200 )
+		{
+			$( '.masthead' ).addClass('masthead-fixed');
+			$( '.content-menu' ).addClass('content-menu-fixed');
+			$( '.bio' ).addClass('bio-fixed');
+			$( '.the-content' ).addClass('the-content-fixed');
+		}
+		else
+		{
+			$( '.masthead' ).removeClass('masthead-fixed');
+			$( '.content-menu' ).removeClass('content-menu-fixed');
+			$( '.bio' ).removeClass('bio-fixed');
+			$( '.the-content' ).removeClass('the-content-fixed');
+		}
+	} );
 
 });
