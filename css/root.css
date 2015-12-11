@@ -493,6 +493,7 @@ pre code {
 .menu-main-navigation-menu-container ul {
 	margin-bottom: 20px;
 	width: 100%;
+	z-index: 9999;
 }
 
 .menu-main-navigation-menu-container li {
