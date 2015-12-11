@@ -23,7 +23,7 @@ if($tile == '')
 	<p><strong><?php bloginfo('description'); ?></strong></p>
 
 	<nav class="main-menu">
-		<div class="container">
+		<div class="container menu-collapse">
 			<?php
 			/**
 			 * The header menu

@@ -35,7 +35,40 @@ $.fn.selectRange = function(start, end) {
 };
 
 jQuery( document ).ready( function( $ ){
-	
+
+	/**
+	 * For debugging responsive design
+	 */
+	// $( window ).resize(function() {
+	// 	var len = $( window ).innerWidth();
+	// 	console.clear();
+	// 	console.log( len );
+	// });
+
+	/**
+	 * Hamburger... mmm...
+	 */
+	$('.main-menu').prepend('<a class="burger" href="#"><i class="fa fa-bars"></i></a>');
+
+	$( '.burger' ).on( 'click', function(e)
+	{
+		$( '.menu-collapse' ).slideToggle();
+	} );
+
+	// fugly
+	$( window ).resize(function() {
+		var len = $( window ).innerWidth();
+		if( len > 940 )
+		{
+			$( '.menu-collapse' ).show();
+		}
+		else
+		{
+			$( '.menu-collapse' ).hide();
+		}
+	});
+
+
 	/**
 	 * FitVids
 	 */
