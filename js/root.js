@@ -10,6 +10,30 @@
  *   Twitter: @corenominal
  *   From: Lincoln, United Kingdom
  */
+
+/**
+ * For Search UX, sets character position in given element
+ */
+$.fn.selectRange = function(start, end) {
+    if(typeof end === 'undefined') {
+        end = start;
+    }
+    return this.each(function() {
+        if('selectionStart' in this) {
+            this.selectionStart = start;
+            this.selectionEnd = end;
+        } else if(this.setSelectionRange) {
+            this.setSelectionRange(start, end);
+        } else if(this.createTextRange) {
+            var range = this.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', end);
+            range.moveStart('character', start);
+            range.select();
+        }
+    });
+};
+
 jQuery( document ).ready( function( $ ){
 	
 	/**
@@ -26,5 +50,48 @@ jQuery( document ).ready( function( $ ){
 	str += '<i class="fa fa-share"></i> Post Comment';
 	str += '</button>';
 	$( '.form-submit' ).append( str );
+
+	/**
+	 * Do the tile! Go tiles! :)
+	 */
+	var tile = $( '#tile' ).attr( 'data-tile' );
+	$( '.tiled' ).css( 'background-image', 'url("' + tile + '")' );
+
+	/**
+	 * Search UX
+	 */
+	
+	var s = $( '#search-masthead-query' ).val().trim();
+	if( s != '' )
+	{
+		var sl = s.length;
+		$( '#search-masthead-query' ).focus();
+		$( '#search-masthead-query' ).selectRange(sl);
+	}
+
+	$( '.search-masthead .fa-search' ).on( 'click',function()
+	{
+		var s = $( '#search-masthead-query' ).val().trim();
+		if( s != '' )
+		{
+			$( '.search-masthead' ).submit();
+		}
+		else
+		{
+			$( '#search-masthead-query' ).val('');
+			$( '#search-masthead-query' ).focus();
+		}
+	});
+
+	$( '.search-masthead' ).on( 'submit',function(e)
+	{
+		var s = $( '#search-masthead-query' ).val().trim();
+		if( s === '' )
+		{
+			$( '#search-masthead-query' ).val('');
+			$( '#search-masthead-query' ).focus();
+			e.preventDefault();
+		}
+	});
 
 });

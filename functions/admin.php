@@ -59,6 +59,23 @@ function corenominal_admin_menu()
 	add_action( 'admin_init', 'corenominal_bio_settings' );
 
 	/**
+	 * Design submenu item
+	 */
+	add_submenu_page( 
+		'corenominal', // parent slug
+		'Design', // page title
+		'Design', // menu title
+		'manage_options', // capability
+		'corenominal_design', // slug
+		'corenominal_design_callback' // callback function
+	 	);
+
+	/**
+	 * Activate bio options 
+	 */
+	add_action( 'admin_init', 'corenominal_design_settings' );
+
+	/**
 	 * Social media accounts submenu item
 	 */
 	add_submenu_page( 
@@ -121,6 +138,11 @@ require get_template_directory() . '/functions/views/admin_corenominal.php';
  * corenominal_bio_callback()
  */
 require get_template_directory() . '/functions/views/admin_corenominal_bio.php';
+
+/**
+ * corenominal_design_callback()
+ */
+require get_template_directory() . '/functions/views/admin_corenominal_design.php';
 
 /**
  * corenominal_social_callback()

@@ -9,8 +9,14 @@
 require get_template_directory() . '/inc/meta.php';
 ?>
 <div class="page-wrapper">
-
-<header class="masthead">
+<?php
+$tile = get_option( 'corenominal_design_img', '' );
+if($tile == '')
+{
+	$tile = get_template_directory_uri() . '/img/default-tile.png';
+}
+?>
+<header id="tile" class="masthead tiled" data-tile="<?php echo $tile; ?>">
 	
 	<h1><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('description') ?>"><?php bloginfo('name') ?></a></h1>
 	
@@ -24,6 +30,12 @@ require get_template_directory() . '/inc/meta.php';
 			 */
 			wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
 			?>
+
+			<form class="search-masthead" action="<?php echo site_url(); ?>" method="get">
+				<input id="search-masthead-query" autocomplete="off" type="text" name="s" placeholder="Search ..." value="<?php the_search_query(); ?>">
+				<i class="fa fa-search"></i>
+			</form>
+
 		</div>
 	</nav>	
 
