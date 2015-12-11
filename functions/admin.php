@@ -4,6 +4,9 @@
  */
 require get_template_directory() . '/functions/custom_post_type_link.php';
 require get_template_directory() . '/functions/custom_taxonomy_link_tag.php';
+require get_template_directory() . '/functions/custom_post_type_snippet.php';
+require get_template_directory() . '/functions/custom_taxonomy_snippet_tag.php';
+require get_template_directory() . '/functions/custom_taxonomy_snippet_language.php';
 
 /**
  * Theme's admin menu

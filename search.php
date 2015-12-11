@@ -36,7 +36,7 @@ if ( have_posts() ) :
 
 		<article class="h-entry post post-summary">
 
-			<?php if( $post->post_type == 'post' ): ?>
+			<?php if( $post->post_type == 'post' || $post->post_type == 'snippet' ): ?>
 				<h2>
 					<a class="p-name u-url" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
 				</h2>
@@ -73,6 +73,15 @@ if ( have_posts() ) :
 				?>
 					<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 					<p class="meta"><?php corenominal_the_link_tags( $post->ID ) ?></p>
+					<?php endif; ?>
+				<?php endif; ?>
+				<?php
+				endif;
+				if( $post->post_type == 'snippet' ):
+				?>
+					<p class="meta"><?php corenominal_the_snippet_languages( $post->ID ) ?></p>
+					<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
+					<p class="meta"><?php corenominal_the_snippet_tags( $post->ID ) ?></p>
 					<?php endif; ?>
 				<?php endif; ?>
 

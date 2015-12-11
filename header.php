@@ -49,9 +49,12 @@ if($tile == '')
 				$published_posts = $count_posts->publish;
 				$count_posts = wp_count_posts( 'link' );
 				$published_links = $count_posts->publish;
+				$count_posts = wp_count_posts( 'snippet' );
+				$published_snippets = $count_posts->publish;
 			?>
 			<li><a <?php if( is_home() ) echo 'class="active"'; ?> href="<?php echo site_url(); ?>">Posts<br><span class="count"><?php echo $published_posts ?></span></a></li>
 			<li><a <?php if( is_post_type_archive( 'link' ) ) echo 'class="active"'; ?> href="<?php echo site_url('link'); ?>">Links<br><span class="count"><?php echo $published_links ?></span></a></li>
+			<li><a <?php if( is_post_type_archive( 'snippet' ) ) echo 'class="active"'; ?> href="<?php echo site_url('snippet'); ?>">Snippets<br><span class="count"><?php echo $published_snippets ?></span></a></li>
 		</ul>
 	</div>
 </nav>

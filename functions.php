@@ -15,6 +15,11 @@ require get_template_directory() . '/functions/menus.php';
 require get_template_directory() . '/functions/misc.php';
 
 /**
+ * Include custom shortcodes.
+ */
+require get_template_directory() . '/functions/shortcodes.php';
+
+/**
  * Metadata function, twitter cards, open graph etc.
  */
 require get_template_directory() . '/functions/metadata.php';
