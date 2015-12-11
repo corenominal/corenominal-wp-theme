@@ -308,6 +308,8 @@ class corenominal_rss_widget extends WP_Widget{
 		$published_posts = $count_posts->publish;
 		$count_posts = wp_count_posts( 'link' );
 		$published_links = $count_posts->publish;
+		$count_posts = wp_count_posts( 'snippet' );
+		$published_snippets = $count_posts->publish;
 		$feeds = '';
 		
 		if( $published_posts )
@@ -318,6 +320,11 @@ class corenominal_rss_widget extends WP_Widget{
 		if( $published_links )
 		{
 			$feeds .= '<li><i class="fa fa-rss"></i> <a href="' . site_url() . '/feed/?post_type=link">Subscribe to Links</a></li>';
+		}
+
+		if( $published_snippets )
+		{
+			$feeds .= '<li><i class="fa fa-rss"></i> <a href="' . site_url() . '/feed/?post_type=snippet">Subscribe to Snippets</a></li>';
 		}
 		
 		if($feeds != '')
