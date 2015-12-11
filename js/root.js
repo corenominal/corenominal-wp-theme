@@ -140,6 +140,7 @@ jQuery( document ).ready( function( $ ){
 			$( '.content-menu' ).addClass('content-menu-fixed');
 			$( '.bio' ).addClass('bio-fixed');
 			$( '.the-content' ).addClass('the-content-fixed');
+			$( '.sidebar' ).addClass('sidebar-fixed');
 		}
 		else
 		{
@@ -147,6 +148,7 @@ jQuery( document ).ready( function( $ ){
 			$( '.content-menu' ).removeClass('content-menu-fixed');
 			$( '.bio' ).removeClass('bio-fixed');
 			$( '.the-content' ).removeClass('the-content-fixed');
+			$( '.sidebar' ).removeClass('sidebar-fixed');
 		}
 	} );
 
