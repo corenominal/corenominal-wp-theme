@@ -56,17 +56,17 @@ jQuery( document ).ready( function( $ ){
 	} );
 
 	// fugly
-	$( window ).resize(function() {
-		var width = $( window ).innerWidth();
-		if( width > 940 )
-		{
-			$( '.menu-collapse' ).show();
-		}
-		else
-		{
-			$( '.menu-collapse' ).hide();
-		}
-	});
+	// $( window ).resize(function() {
+	// 	var width = $( window ).innerWidth();
+	// 	if( width > 940 )
+	// 	{
+	// 		$( '.menu-collapse' ).show();
+	// 	}
+	// 	else
+	// 	{
+	// 		$( '.menu-collapse' ).hide();
+	// 	}
+	// });
 
 
 	/**
