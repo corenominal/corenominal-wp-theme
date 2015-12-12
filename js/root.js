@@ -55,17 +55,13 @@ jQuery( document ).ready( function( $ ){
 		$( '.menu-collapse' ).slideToggle();
 	} );
 
-	// fugly
+	// Fugly responsive fix
 	$( window ).resize(function() {
 		var width = $( window ).width();
-		// if( width > 940 )
-		// {
-		// 	$( '.menu-collapse' ).show();
-		// }
-		// else
-		// {
-		// 	$( '.menu-collapse' ).hide();
-		// }		
+		if( width > 940 )
+		{
+			$( '.menu-collapse' ).show();
+		}
 	});
 
 	/**
