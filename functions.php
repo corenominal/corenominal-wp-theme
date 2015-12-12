@@ -5,6 +5,11 @@
  */
 
 /**
+ * Theme setup on activation
+ */
+require get_template_directory() . '/functions/theme-activation.php';
+
+/**
  * Register navigation menus.
  */
 require get_template_directory() . '/functions/menus.php';
