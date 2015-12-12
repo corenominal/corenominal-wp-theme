@@ -2,7 +2,6 @@
 /**
  * Disable the emoji's
  * ===================
- * This does not fully work, still seeing smilies in my posts :(
  * See: http://wordpress.stackexchange.com/a/185578
  */
 function disable_emojis()
@@ -15,6 +14,7 @@ function disable_emojis()
     remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );  
     remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
     add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+    update_option( 'use_smilies', false );
 }
 add_action( 'init', 'disable_emojis' );
 
