@@ -56,9 +56,8 @@ jQuery( document ).ready( function( $ ){
 	} );
 
 	// fugly
-	$( window ).resize(function(e) {
-		e.preventDefault();
-		var width = $( window ).innerWidth();
+	$( window ).resize(function() {
+		var width = $( window ).width();
 		if( width > 940 )
 		{
 			$( '.menu-collapse' ).show();
@@ -66,9 +65,8 @@ jQuery( document ).ready( function( $ ){
 		else
 		{
 			$( '.menu-collapse' ).hide();
-		}
+		}		
 	});
-
 
 	/**
 	 * FitVids
