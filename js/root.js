@@ -58,14 +58,14 @@ jQuery( document ).ready( function( $ ){
 	// fugly
 	$( window ).resize(function() {
 		var width = $( window ).width();
-		if( width > 940 )
-		{
-			$( '.menu-collapse' ).show();
-		}
-		else
-		{
-			$( '.menu-collapse' ).hide();
-		}		
+		// if( width > 940 )
+		// {
+		// 	$( '.menu-collapse' ).show();
+		// }
+		// else
+		// {
+		// 	$( '.menu-collapse' ).hide();
+		// }		
 	});
 
 	/**
