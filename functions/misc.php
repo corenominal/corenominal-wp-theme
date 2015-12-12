@@ -1,7 +1,7 @@
 <?php
 /**
- * Disable the emoji's
- * ===================
+ * Kill all emojis
+ * ===============
  * See: http://wordpress.stackexchange.com/a/185578
  */
 function disable_emojis()
@@ -14,11 +14,6 @@ function disable_emojis()
     remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );  
     remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
     add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
-    // I couldn't find the option to turn these off on the
-    // WordPress settings->writing page, so used the below as
-    // a temporary fix. I guess it could go in the theme activation
-    // hook?!
-    //update_option( 'use_smilies', false );
 }
 add_action( 'init', 'disable_emojis' );
 
