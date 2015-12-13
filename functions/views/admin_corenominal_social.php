@@ -20,6 +20,11 @@ function corenominal_social_settings()
 
 	register_setting(
 		'corenominal_social_group', // option group 
+		'corenominal_codepen_username' // options name
+		);
+
+	register_setting(
+		'corenominal_social_group', // option group 
 		'corenominal_facebook_username' // options name
 		);
 	
@@ -48,6 +53,14 @@ function corenominal_social_settings()
 		'corenominal-github-username', // id
 		'GitHub Username', // title/label
 		'corenominal_github_username', // callback
+		'corenominal_social', // page
+		'corenominal-social' // settings section 
+		);
+
+	add_settings_field(
+		'corenominal-codepen-username', // id
+		'CodePen Username', // title/label
+		'corenominal_codepen_username', // callback
 		'corenominal_social', // page
 		'corenominal-social' // settings section 
 		);
@@ -87,6 +100,13 @@ function corenominal_github_username()
     $setting = esc_attr( get_option( 'corenominal_github_username' ) );
 	echo '<input type="text" class="regular-text" name="corenominal_github_username" value="'.$setting.'" placeholder="handle">';
 	echo '<p class="description">Your GitHub username.</p>';
+}
+
+function corenominal_codepen_username()
+{
+    $setting = esc_attr( get_option( 'corenominal_codepen_username' ) );
+	echo '<input type="text" class="regular-text" name="corenominal_codepen_username" value="'.$setting.'" placeholder="handle">';
+	echo '<p class="description">Your CodePen username.</p>';
 }
 
 function corenominal_facebook_username()

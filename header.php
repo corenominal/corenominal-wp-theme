@@ -115,6 +115,13 @@ if($tile == '')
 				<?php endif; ?>
 
 				<?php
+				$codepen = get_option( 'corenominal_codepen_username', '' );
+				if( $codepen != '' ):
+				?>
+					<li><i class="fa fa-codepen"></i> <a target="_blank" href="https://codepen.io/<?php echo $codepen; ?>">Follow me on CodePen</a></li>
+				<?php endif; ?>
+
+				<?php
 				$facebook = get_option( 'corenominal_facebook_username', '' );
 				if( $facebook != '' ):
 				?>
