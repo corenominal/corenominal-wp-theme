@@ -3,32 +3,38 @@
  * A custom single use page template for providing an API.
  */
 
-
 /**
- * Everything below is temporary, I'll flesh it out later.
+ * Capture all requests
  */
-
 $data = $_REQUEST;
 
 /**
- * Sanity check
+ * Get the API key
+ */
+$apikey = get_option( 'corenominal_apikey', '' );
+
+/**
+ * Sanity checks
  */
 if( !sizeof( $data ) || !isset( $data['method'] ) )
 {
 	die( 'Error: no method defined' );
 }
 
-/**
- * Switch for API methods
- */
-switch ( $data['method'] )
+if( preg_match( '/[^a-z_\-0-9]/i', $data['method'] ) )
 {
-	case 'ip':
-		header( 'Content-Type: text/plain' );
-		echo $_SERVER['REMOTE_ADDR'];
-		break;
-	
-	default:
-		die( 'Error: provided method could not be found' );
-		break;
+	die( 'Error: invalid method' );
+}
+
+/**
+ * Test if file exists for supplied method
+ */
+$method = get_template_directory() . '/api/' . $data['method'] . '.php';
+if( file_exists( $method ) )
+{
+	require $method;
+}
+else
+{
+	die( 'Error: method not found' );
 }
