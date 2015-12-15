@@ -36,7 +36,7 @@ if ( have_posts() ) :
 
 		<article class="h-entry post post-summary">
 
-			<?php if( $post->post_type == 'post' || $post->post_type == 'snippet' ): ?>
+			<?php if( $post->post_type == 'page' || $post->post_type == 'post' || $post->post_type == 'snippet' ): ?>
 				<h2>
 					<a class="p-name u-url" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
 				</h2>
