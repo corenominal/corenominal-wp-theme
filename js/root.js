@@ -147,4 +147,17 @@ jQuery( document ).ready( function( $ ){
 		}
 	} );
 
+	/**
+	 * Social stuff
+	 */
+	function shareTwitter(url, text)
+	{
+		open('http://twitter.com/share?url=' + url + '&text=' + text, 'tshare', 'height=400,width=550,resizable=1,toolbar=0,menubar=0,status=0,location=0');  
+	}
+
+	function shareFacebook(url, text, image)
+	{
+		open('http://facebook.com/sharer.php?s=100&p[url]=' + url + '&p[images][0]=' + image + '&p[title]=' + text, 'fbshare', 'height=380,width=660,resizable=0,toolbar=0,menubar=0,status=0,location=0,scrollbars=0');
+	}
+
 });
