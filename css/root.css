@@ -607,7 +607,7 @@ pre code {
 		height: 260px;
 	}
 
-	.masthead-fixed {
+	.masthead.masthead-fixed {
 		position:fixed;
 		top:0;
 		left:0;
@@ -646,9 +646,8 @@ pre code {
 		text-align: left;
 	}
 
-	.content-menu-fixed {
+	.content-menu.content-menu-fixed {
 		position: fixed;
-		top: 200;
 		left: 0;
 		width: 100%;
 		margin-top: 60px;
@@ -674,18 +673,18 @@ pre code {
 		float: left;
 		text-align: left;
 	}
-
-	.bio-fixed {
-		position:fixed;
-		top: 280px;
-		width: 208px;
-		z-index: 9500;
-	}
 	
 	.bio {
 		margin-top: -200px;
 		margin-right: 20px;
 		width: 208px;
+	}
+
+	.bio.bio-fixed {
+		position:fixed;
+		top: 280px;
+		width: 208px;
+		z-index: 9500;
 	}
 
 	.bio-img {
@@ -702,7 +701,7 @@ pre code {
 		float: left;
 	}
 
-	.the-content-fixed {
+	.the-content.the-content-fixed {
 		padding-top:360px;
 	}
 }
