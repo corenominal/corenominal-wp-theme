@@ -710,9 +710,12 @@ pre code {
   	.container {
 		width: 1190px;
 	}
+
+	.bio {
+		width: 278px;
+	}
 	
-	.bio,
-	.bio-fixed {
+	.bio.bio-fixed {
 		width: 278px;
 	}
 
