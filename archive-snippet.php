@@ -1,6 +1,6 @@
 <?php
 /**
- * The link archive template
+ * The snippet archive template
  */
 
 /**
