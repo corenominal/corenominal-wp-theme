@@ -77,3 +77,27 @@ function corenominal_options_select( $id, $options, $default, $description = '' 
     }
     return $html;
 }
+
+/**
+ * Produces select for metaboxes
+ */
+function corenominal_metabox_select( $id, $options, $sellected, $description = '' )
+{
+    $select = $sellected;
+    $html = '<select name="'.$id.'">';
+        foreach ( $options as $option )
+        {
+            $selected = '';
+            if ( $option == $select )
+            {
+                $selected = ' selected="selected"';
+            }
+            $html .= '<option value="'.$option.'"'.$selected.'>'.$option.'</option>';
+        }
+    $html .= '</select>';
+    if($description != '')
+    {
+        $html .= '<p class="description">' . $description . '</p>';
+    }
+    return $html;
+}
