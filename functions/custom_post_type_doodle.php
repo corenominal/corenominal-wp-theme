@@ -130,3 +130,60 @@ function corenominal_metabox_doodle_pattern_save( $post_id )
 
 }
 add_action( 'save_post', 'corenominal_metabox_doodle_pattern_save' );
+
+/**
+ * Add custom metabox for entering the Openclipart link
+ */
+function corenominal_add_metabox_openclipart_link()
+{
+	add_meta_box(
+		'corenominal_metabox_openclipart_link', // id
+		'The Openclipart URL', // title
+		'corenominal_metabox_openclipart_link_callback', //callback function
+		'doodle', // post type
+		'normal', // context - placement i.e. 'side', 'normal', 'advanced'
+		'high' // priority - i.e. 'high', 'core', 'default', 'low'
+		);
+}
+add_action( 'add_meta_boxes', 'corenominal_add_metabox_openclipart_link' );
+
+/**
+ * The metabox callback
+ */
+function corenominal_metabox_openclipart_link_callback( $post )
+{
+	wp_nonce_field( basename( __FILE__ ), 'metabox_nonce' );
+	$post_meta = get_post_meta( $post->ID ); 
+	?>
+
+	<div>
+		<div class="meta-row">
+			<input placeholder="http://..." class="code the_link" name="openclipart_link" id="openclipart_link" value="<?php if ( ! empty ( $post_meta['openclipart_link'] ) ) echo esc_attr( $post_meta['openclipart_link'][0] ); ?>" type="text">
+		</div>
+	</div>
+
+	<?php
+}
+
+/**
+ * Save the Openclipart link
+ */
+function corenominal_metabox_openclipart_link_save( $post_id )
+{
+	$is_autosave = wp_is_post_autosave( $post_id );
+	$is_revision = wp_is_post_revision( $post_id );
+	$is_valid_nonce = ( isset( $_POST['metabox_nonce'] ) && wp_verify_nonce( $_POST['metabox_nonce'], basename( __FILE__ ) ) ) ? 'true' : 'false';
+
+	// Exit script depending on save status
+	if ($is_autosave || $is_revision || !$is_valid_nonce)
+	{
+		return;
+	}
+
+	if ( isset( $_POST['openclipart_link'] ) )
+	{
+		update_post_meta( $post_id, 'openclipart_link', sanitize_text_field( $_POST['openclipart_link'] ) );
+	}
+
+}
+add_action( 'save_post', 'corenominal_metabox_openclipart_link_save' );
