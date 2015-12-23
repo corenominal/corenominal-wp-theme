@@ -126,9 +126,9 @@ body {
 .content-menu ul li a {
 	display: block;
 	padding-top: 10px;
-	padding-right: 10px;
+	/*padding-right: 10px;*/
 	padding-bottom: 4px;
-	padding-left: 10px;
+	/*padding-left: 10px;*/
 	border-bottom: 4px solid #fff;
 	text-align: center;
 	color: #8899a6;
@@ -670,6 +670,8 @@ pre code {
 	.content-menu ul li a {
 		margin-left: 0;
 		margin-right: 30px;
+		padding-right: 10px;
+		padding-left: 10px;
 	}
 
   	.bio-wrapper {
