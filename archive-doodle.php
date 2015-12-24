@@ -66,7 +66,7 @@ if ( have_posts() ) :
 			<footer>
 				
 				<p class="meta"><i class="fa fa-clock-o"></i> <span class="sr-only">Posted @</span> <?php the_time() ?></p>
-			
+				<p class="meta"><?php corenominal_the_doodle_media( $post->ID ) ?></p>
 			</footer>
 
 		</article>

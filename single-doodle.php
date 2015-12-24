@@ -37,7 +37,8 @@ if ( have_posts() ) :
 			<footer>
 				
 				<p class="meta"><a class="u-url" href="<?php the_permalink(); ?>"><i class="fa fa-calendar"></i>  <?php the_date() ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-clock-o"></i> <?php the_time() ?></a></p>
-
+				<p class="meta"><?php corenominal_the_doodle_media( $post->ID ) ?></p>
+				
 			</footer>
 				
 		</div>
