@@ -599,6 +599,11 @@ pre code {
 }
 
 @media only screen and (min-width: 940px) {
+  	.main-menu {
+		position: fixed;
+		top: 0;
+  	}
+
   	.burger {
   		display:none;
   	}

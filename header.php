@@ -22,7 +22,7 @@ if($tile == '')
 	
 	<p><strong><?php bloginfo('description'); ?></strong></p>
 
-	<nav class="main-menu">
+	<div class="main-menu">
 		<div class="container menu-collapse">
 			<?php
 			/**
@@ -37,7 +37,7 @@ if($tile == '')
 			</form>
 
 		</div>
-	</nav>	
+	</div>	
 
 </header>
 
