@@ -127,7 +127,8 @@ jQuery( document ).ready( function( $ ){
 	 */
 	$( document ).scroll( function()
 	{
-    	var top = $( document ).scrollTop();
+    	//var top = $( document ).scrollTop();
+    	var top  = window.pageYOffset || document.documentElement.scrollTop;
     	var width = $( window ).innerWidth();
 		if( width > 940 && top > 200 )
 		{
