@@ -61,12 +61,12 @@ body {
 	position: relative;
 }
 
-.masthead {
+#masthead {
 	background: #fff;
 }
 
-.masthead h1,
-.masthead p {
+#masthead h1,
+#masthead p {
 	display:none;
 }
 
