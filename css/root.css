@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
 	color: #f6271a;
 	text-decoration: none;
-	transition: all 0.25s ease;
+	/*transition: all 0.25s ease;*/
 }
 
 a:hover {
@@ -171,7 +171,7 @@ a:hover {
 }
 
 .bio {
-	transition: all 0.5s ease;
+	/*transition: all 0.5s ease;*/
 }
 
 .taxonomy-title,
