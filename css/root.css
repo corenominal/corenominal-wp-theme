@@ -616,7 +616,7 @@ pre code {
 		height: 260px;
 	}
 
-	.masthead.masthead-fixed {
+	.masthead-fixed {
 		position:fixed;
 		top:0;
 		left:0;

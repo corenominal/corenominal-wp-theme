@@ -82,7 +82,7 @@ jQuery( document ).ready( function( $ ){
 	/**
 	 * Do the tile! Go tiles! :)
 	 */
-	var tile = $( '#tile' ).attr( 'data-tile' );
+	var tile = $( '#masthead' ).attr( 'data-tile' );
 	$( '.tiled' ).css( 'background-image', 'url("' + tile + '")' );
 
 	/**
@@ -131,7 +131,8 @@ jQuery( document ).ready( function( $ ){
     	var width = $( window ).innerWidth();
 		if( width > 940 && top > 200 )
 		{
-			$( '.masthead' ).addClass('masthead-fixed');
+			$( '#masthead' ).addClass('masthead-fixed');
+			$( '#masthead' ).removeClass('masthead');
 			$( '.content-menu' ).addClass('content-menu-fixed');
 			$( '.bio' ).addClass('bio-fixed');
 			$( '.the-content' ).addClass('the-content-fixed');
@@ -139,7 +140,8 @@ jQuery( document ).ready( function( $ ){
 		}
 		else
 		{
-			$( '.masthead' ).removeClass('masthead-fixed');
+			$( '#masthead' ).removeClass('masthead-fixed');
+			$( '#masthead' ).addClass('masthead');
 			$( '.content-menu' ).removeClass('content-menu-fixed');
 			$( '.bio' ).removeClass('bio-fixed');
 			$( '.the-content' ).removeClass('the-content-fixed');

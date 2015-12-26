@@ -16,7 +16,7 @@ if($tile == '')
 	$tile = get_template_directory_uri() . '/img/default-tile.png';
 }
 ?>
-<header id="tile" class="masthead tiled" data-tile="<?php echo $tile; ?>">
+<header id="masthead" class="masthead tiled" data-tile="<?php echo $tile; ?>">
 	
 	<h1><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('description') ?>"><?php bloginfo('name') ?></a></h1>
 	
