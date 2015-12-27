@@ -102,10 +102,10 @@ body {
 }
 
 .main-menu {
-	position: fixed;
-	z-index: 9900;
+	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 9000;
 	width: 100%;
 	background: #fff;
 	border-bottom: 0px solid #e1e8ed;
@@ -599,11 +599,6 @@ pre code {
 }
 
 @media only screen and (min-width: 940px) {
-  	.main-menu {
-		position: fixed;
-		top: 0;
-  	}
-
   	.burger {
   		display:none;
   	}
@@ -614,15 +609,6 @@ pre code {
 
   	.masthead {
 		height: 260px;
-	}
-
-	.masthead-fixed {
-		position:fixed;
-		top:0;
-		left:0;
-		height: 60px;
-		width: 100%;
-		z-index: 9000;
 	}
 
 	.menu-main-navigation-menu-container ul {
@@ -655,18 +641,6 @@ pre code {
 		text-align: left;
 	}
 
-	.content-menu.content-menu-fixed {
-		position: fixed;
-		left: 0;
-		width: 100%;
-		margin-top: 60px;
-		border-bottom: 0px solid #e1e8ed;
-		z-index: 9100;
-		-webkit-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
-		-moz-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
-		box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
-	}
-
 	.content-menu ul {
 		margin-left: 25%;
 		margin-bottom: 0;
@@ -691,13 +665,6 @@ pre code {
 		width: 208px;
 	}
 
-	.bio.bio-fixed {
-		position:fixed;
-		top: 280px;
-		width: 208px;
-		z-index: 9500;
-	}
-
 	.bio-img {
 		margin:0;
 		margin-bottom: 20px;
@@ -711,10 +678,6 @@ pre code {
 		width: 75%;
 		float: left;
 	}
-
-	.the-content.the-content-fixed {
-		padding-top:360px;
-	}
 }
 
 @media only screen and (min-width: 1210px) {
@@ -725,17 +688,9 @@ pre code {
 	.bio {
 		width: 278px;
 	}
-	
-	.bio.bio-fixed {
-		width: 278px;
-	}
 
 	.the-content {
 		width: 50%;
-	}
-
-	.sidebar-fixed {
-		padding-top:360px;
 	}
 
   	.sidebar {
