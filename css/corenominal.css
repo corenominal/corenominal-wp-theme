@@ -721,6 +721,13 @@ pre code {
 		width: 208px;
 	}
 
+	.bio.bio-fixed {
+		position:fixed;
+		top: 280px;
+		width: 208px;
+		z-index: 9500;
+	}
+
 	.bio-img {
 		margin:0;
 		margin-bottom: 20px;
@@ -745,6 +752,10 @@ pre code {
 	}
 
 	.bio {
+		width: 278px;
+	}
+
+	.bio.bio-fixed {
 		width: 278px;
 	}
 
