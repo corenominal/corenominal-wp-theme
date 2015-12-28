@@ -82,7 +82,7 @@ jQuery( document ).ready( function( $ ){
 	/**
 	 * Do the tile! Go tiles! :)
 	 */
-	var tile = $( '#masthead' ).attr( 'data-tile' );
+	var tile = $( '#tile-top' ).attr( 'data-tile' );
 	$( '.tiled' ).css( 'background-image', 'url("' + tile + '")' );
 
 	/**

@@ -16,11 +16,13 @@ if($tile == '')
 	$tile = get_template_directory_uri() . '/img/default-tile.png';
 }
 ?>
-<header id="masthead" class="masthead tiled" data-tile="<?php echo $tile; ?>">
-	
-	<h1><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('description') ?>"><?php bloginfo('name') ?></a></h1>
-	
-	<p><strong><?php bloginfo('description'); ?></strong></p>
+
+<h1 class="site-title"><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('description') ?>"><?php bloginfo('name') ?></a></h1>
+<p class="site-description"><strong><?php bloginfo('description'); ?></strong></p>
+
+
+
+<!-- <header id="masthead" class="masthead tiled" data-tile="<?php echo $tile; ?>"> -->
 
 	<div class="main-menu">
 		<div class="container menu-collapse">
@@ -39,7 +41,8 @@ if($tile == '')
 		</div>
 	</div>	
 
-</header>
+<!-- </header> -->
+<div id="tiled-top" class="tiled" data-tile="<?php echo $tile; ?>"></div>
 
 <nav id="content-menu" class="content-menu">
 	<div class="container">

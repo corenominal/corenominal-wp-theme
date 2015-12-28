@@ -61,12 +61,12 @@ body {
 	position: relative;
 }
 
-#masthead {
+#tiled-top {
 	background: #fff;
 }
 
-#masthead h1,
-#masthead p {
+.site-title,
+.site-description {
 	display:none;
 }
 
@@ -486,7 +486,7 @@ pre code {
 	padding-left: 10px;
 }
 
-.masthead {
+#tiled-top {
 	height: 60px;
 }
 
@@ -607,7 +607,7 @@ pre code {
   		display: block;
   	}
 
-  	.masthead {
+  	#tiled-top {
 		height: 260px;
 	}
 
