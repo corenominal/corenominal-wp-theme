@@ -669,6 +669,9 @@ pre code {
 		background: #fff;
 		border-bottom: 1px solid #e1e8ed;
 		height:60px;
+		-webkit-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+		-moz-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+		box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
 	}
 
 	.content-menu.content-menu-fixed ul {
