@@ -132,24 +132,16 @@ jQuery( document ).ready( function( $ ){
 		{
 			if ( direction == 'down' && $( window ).innerWidth() > 940 )
 			{
-				//$( '#masthead' ).addClass('masthead-fixed');
-	 			//$( '#masthead' ).removeClass('masthead');
 	 			$( '#content-menu' ).addClass('content-menu-fixed');
-	 			//$( '#content-menu' ).removeClass('content-menu');
 	 			$( '#tiled-top' ).addClass('tiled-top-fixed');
-	 			//$( '#tiled-top' ).removeClass('tiled-top');
 	 			$( '.bio' ).addClass('bio-fixed');
 	 			$( '.the-content' ).addClass('the-content-fixed');
 	 			$( '.sidebar' ).addClass('sidebar-fixed');
 			}
 			else if( direction == 'up' && $( window ).innerWidth() > 940 )
 			{
-				//$( '#masthead' ).removeClass('masthead-fixed');
-	 			//$( '#masthead' ).addClass('masthead');
 	 			$( '#content-menu' ).removeClass('content-menu-fixed');
-	 			//$( '#content-menu' ).addClass('content-menu');
 	 			$( '#tiled-top' ).removeClass('tiled-top-fixed');
-	 			//$( '#tiled-top' ).addClass('tiled-top');
 	 			$( '.bio' ).removeClass('bio-fixed');
 	 			$( '.the-content' ).removeClass('the-content-fixed');
 	 			$( '.sidebar' ).removeClass('sidebar-fixed');
