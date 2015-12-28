@@ -102,7 +102,7 @@ body {
 }
 
 .main-menu {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 9000;
@@ -611,6 +611,15 @@ pre code {
 		height: 260px;
 	}
 
+	.masthead-fixed {
+		position: fixed;
+		z-index: 8900;
+		top: 0;
+		left: 0;
+		height: 65px;
+		width: 100%;
+	}
+
 	.menu-main-navigation-menu-container ul {
 		margin-bottom: 0;
 		width: 60%;
@@ -651,6 +660,55 @@ pre code {
 		margin-right: 30px;
 		padding-right: 10px;
 		padding-left: 10px;
+	}
+
+	.content-menu-fixed {
+		position: fixed;
+		top: 65px;
+		left: 0;
+		width:100%;
+		z-index: 9100;
+		background: #fff;
+		border-bottom: 1px solid #e1e8ed;
+		height:60px;
+	}
+
+	.content-menu-fixed ul {
+		margin-left: 25%;
+	}
+
+	.content-menu-fixed ul li {
+		display: inline-block;
+	}
+
+	.content-menu-fixed ul li a {
+		display: block;
+		padding-top: 10px;
+		padding-bottom: 4px;
+		border-bottom: 4px solid #fff;
+		text-align: center;
+		color: #8899a6;
+		margin-left: 0;
+		margin-right: 30px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	.content-menu-fixed ul li a:hover {
+		color: #f6271a;
+		border-bottom: 4px solid #f6271a;
+	}
+
+	.content-menu-fixed ul li a.active {
+		border-bottom: 4px solid #f6271a;
+	}
+
+	.content-menu-fixed .count {
+		font-size: 20px;
+		font-weight: bold;
+		padding-top: 6px;
+		display: block;
+		color: #292f33;
 	}
 
   	.bio-wrapper {

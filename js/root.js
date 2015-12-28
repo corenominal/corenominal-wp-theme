@@ -125,6 +125,33 @@ jQuery( document ).ready( function( $ ){
 	/**
 	 * Scrolly stuff
 	 */
+	//width = width = $( window ).innerWidth();
+	var waypoint = new Waypoint({
+		element: $( '#content-menu' ),
+		handler: function(direction)
+		{
+			if ( direction == 'down' && $( window ).innerWidth() > 940 )
+			{
+				console.log( 'I am 20px from the top of the window' );
+				console.log( direction );
+				$( '#masthead' ).addClass('masthead-fixed');
+	 			$( '#masthead' ).removeClass('masthead');
+	 			$( '#content-menu' ).addClass('content-menu-fixed');
+	 			$( '#content-menu' ).removeClass('content-menu');
+			}
+			else if( direction == 'up' && $( window ).innerWidth() > 940 )
+			{
+				console.log( 'Going up!' );
+				$( '#masthead' ).removeClass('masthead-fixed');
+	 			$( '#masthead' ).addClass('masthead');
+	 			$( '#content-menu' ).removeClass('content-menu-fixed');
+	 			$( '#content-menu' ).addClass('content-menu');
+			}
+		},
+		offset: 65 
+	});
+
+
 	// $( document ).scroll( function()
 	// {
  //    	var top = $( document ).scrollTop();

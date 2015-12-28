@@ -41,7 +41,7 @@ if($tile == '')
 
 </header>
 
-<nav class="content-menu">
+<nav id="content-menu" class="content-menu">
 	<div class="container">
 		<ul>
 			<?php
