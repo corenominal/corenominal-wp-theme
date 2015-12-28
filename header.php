@@ -20,29 +20,24 @@ if($tile == '')
 <h1 class="site-title"><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('description') ?>"><?php bloginfo('name') ?></a></h1>
 <p class="site-description"><strong><?php bloginfo('description'); ?></strong></p>
 
+<div class="main-menu">
+	<div class="container menu-collapse">
+		<?php
+		/**
+		 * The header menu
+		 */
+		wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
+		?>
 
+		<form class="search-masthead" action="<?php echo site_url(); ?>" method="get">
+			<input id="search-masthead-query" autocomplete="off" type="text" name="s" placeholder="Search ..." value="<?php the_search_query(); ?>">
+			<i class="fa fa-search"></i>
+		</form>
 
-<!-- <header id="masthead" class="masthead tiled" data-tile="<?php echo $tile; ?>"> -->
+	</div>
+</div>	
 
-	<div class="main-menu">
-		<div class="container menu-collapse">
-			<?php
-			/**
-			 * The header menu
-			 */
-			wp_nav_menu( array( 'theme_location' => 'header-menu' ) );
-			?>
-
-			<form class="search-masthead" action="<?php echo site_url(); ?>" method="get">
-				<input id="search-masthead-query" autocomplete="off" type="text" name="s" placeholder="Search ..." value="<?php the_search_query(); ?>">
-				<i class="fa fa-search"></i>
-			</form>
-
-		</div>
-	</div>	
-
-<!-- </header> -->
-<div id="tiled-top" class="tiled" data-tile="<?php echo $tile; ?>"></div>
+<div id="tiled-top" class="tiled-top tiled" data-tile="<?php echo $tile; ?>"></div>
 
 <nav id="content-menu" class="content-menu">
 	<div class="container">

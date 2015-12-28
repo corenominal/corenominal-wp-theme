@@ -82,7 +82,7 @@ jQuery( document ).ready( function( $ ){
 	/**
 	 * Do the tile! Go tiles! :)
 	 */
-	var tile = $( '#tile-top' ).attr( 'data-tile' );
+	var tile = $( '#tiled-top' ).attr( 'data-tile' );
 	$( '.tiled' ).css( 'background-image', 'url("' + tile + '")' );
 
 	/**
@@ -138,6 +138,8 @@ jQuery( document ).ready( function( $ ){
 	 			$( '#masthead' ).removeClass('masthead');
 	 			$( '#content-menu' ).addClass('content-menu-fixed');
 	 			$( '#content-menu' ).removeClass('content-menu');
+	 			$( '#tiled-top' ).addClass('tiled-top-fixed');
+	 			$( '#tiled-top' ).removeClass('tiled-top');
 			}
 			else if( direction == 'up' && $( window ).innerWidth() > 940 )
 			{
@@ -146,6 +148,8 @@ jQuery( document ).ready( function( $ ){
 	 			$( '#masthead' ).addClass('masthead');
 	 			$( '#content-menu' ).removeClass('content-menu-fixed');
 	 			$( '#content-menu' ).addClass('content-menu');
+	 			$( '#tiled-top' ).removeClass('tiled-top-fixed');
+	 			$( '#tiled-top' ).addClass('tiled-top');
 			}
 		},
 		offset: 65 

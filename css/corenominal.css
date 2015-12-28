@@ -61,8 +61,10 @@ body {
 	position: relative;
 }
 
-#tiled-top {
+.tiled-top {
 	background: #fff;
+	width: 100%;
+	height: 60px;
 }
 
 .site-title,
@@ -486,10 +488,6 @@ pre code {
 	padding-left: 10px;
 }
 
-#tiled-top {
-	height: 60px;
-}
-
 .menu-collapse {
 	display: none;
 }
@@ -607,11 +605,11 @@ pre code {
   		display: block;
   	}
 
-  	#tiled-top {
+  	.tiled-top {
 		height: 260px;
 	}
 
-	.masthead-fixed {
+	.tiled-top-fixed {
 		position: fixed;
 		z-index: 8900;
 		top: 0;
