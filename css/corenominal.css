@@ -734,6 +734,9 @@ pre code {
 		width: 75%;
 		float: left;
 	}
+	.the-content.the-content-fixed {
+		padding-top:340px;
+	}
 }
 
 @media only screen and (min-width: 1210px) {
@@ -753,6 +756,10 @@ pre code {
     	display: block;
     	float: left;
     	width: 25%;
+  	}
+
+  	.sidebar.sidebar-fixed {
+  		padding-top:340px;
   	}
 }
 
