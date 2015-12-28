@@ -123,6 +123,33 @@ jQuery( document ).ready( function( $ ){
 	});
 
 	/**
+	 * Scrolly stuff
+	 */
+	// $( document ).scroll( function()
+	// {
+ //    	var top = $( document ).scrollTop();
+ //    	var width = $( window ).innerWidth();
+	// 	if( width > 940 && top > 200 )
+	// 	{
+	// 		$( '#masthead' ).addClass('masthead-fixed');
+	// 		$( '#masthead' ).removeClass('masthead');
+	// 		$( '.content-menu' ).addClass('content-menu-fixed');
+	// 		$( '.bio' ).addClass('bio-fixed');
+	// 		$( '.the-content' ).addClass('the-content-fixed');
+	// 		$( '.sidebar' ).addClass('sidebar-fixed');
+	// 	}
+	// 	else
+	// 	{
+	// 		$( '#masthead' ).removeClass('masthead-fixed');
+	// 		$( '#masthead' ).addClass('masthead');
+	// 		$( '.content-menu' ).removeClass('content-menu-fixed');
+	// 		$( '.bio' ).removeClass('bio-fixed');
+	// 		$( '.the-content' ).removeClass('the-content-fixed');
+	// 		$( '.sidebar' ).removeClass('sidebar-fixed');
+	// 	}
+	// } );
+
+	/**
 	 * Social stuff
 	 */
 	function shareTwitter(url, text)
