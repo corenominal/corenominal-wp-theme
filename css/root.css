@@ -54,7 +54,7 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	background: #f5f8fa;
 	color: #292f33;
-	/*overflow-y: scroll;*/
+	overflow-y: scroll;
 }
 
 .page-wrapper {
@@ -104,7 +104,7 @@ body {
 }
 
 .main-menu {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 9000;
@@ -609,15 +609,6 @@ pre code {
 		height: 260px;
 	}
 
-	.tiled-top.tiled-top-fixed {
-		position: fixed;
-		z-index: 8900;
-		top: 0;
-		left: 0;
-		height: 65px;
-		width: 100%;
-	}
-
 	.menu-main-navigation-menu-container ul {
 		margin-bottom: 0;
 		width: 60%;
@@ -660,58 +651,6 @@ pre code {
 		padding-left: 10px;
 	}
 
-	.content-menu.content-menu-fixed {
-		position: fixed;
-		top: 65px;
-		left: 0;
-		width:100%;
-		z-index: 9100;
-		background: #fff;
-		border-bottom: 1px solid #e1e8ed;
-		height:60px;
-		-webkit-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
-		-moz-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
-		box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
-	}
-
-	.content-menu.content-menu-fixed ul {
-		margin-left: 25%;
-	}
-
-	.content-menu.content-menu-fixed ul li {
-		display: inline-block;
-	}
-
-	.content-menu.content-menu-fixed ul li a {
-		display: block;
-		padding-top: 10px;
-		padding-bottom: 4px;
-		border-bottom: 4px solid #fff;
-		text-align: center;
-		color: #8899a6;
-		margin-left: 0;
-		margin-right: 30px;
-		padding-right: 10px;
-		padding-left: 10px;
-	}
-
-	.content-menu.content-menu-fixed ul li a:hover {
-		color: #f6271a;
-		border-bottom: 4px solid #f6271a;
-	}
-
-	.content-menu.content-menu-fixed ul li a.active {
-		border-bottom: 4px solid #f6271a;
-	}
-
-	.content-menu.content-menu-fixed .count {
-		font-size: 20px;
-		font-weight: bold;
-		padding-top: 6px;
-		display: block;
-		color: #292f33;
-	}
-
   	.bio-wrapper {
 		width:25%;
 		float: left;
@@ -722,13 +661,6 @@ pre code {
 		margin-top: -200px;
 		margin-right: 20px;
 		width: 208px;
-	}
-
-	.bio.bio-fixed {
-		position:fixed;
-		top: 280px;
-		width: 208px;
-		z-index: 9500;
 	}
 
 	.bio-img {
@@ -744,9 +676,6 @@ pre code {
 		width: 75%;
 		float: left;
 	}
-	.the-content.the-content-fixed {
-		padding-top:340px;
-	}
 }
 
 @media only screen and (min-width: 1210px) {
@@ -758,10 +687,6 @@ pre code {
 		width: 278px;
 	}
 
-	.bio.bio-fixed {
-		width: 278px;
-	}
-
 	.the-content {
 		width: 50%;
 	}
@@ -770,10 +695,6 @@ pre code {
     	display: block;
     	float: left;
     	width: 25%;
-  	}
-
-  	.sidebar.sidebar-fixed {
-  		padding-top:340px;
   	}
 }
 

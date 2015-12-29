@@ -125,30 +125,29 @@ jQuery( document ).ready( function( $ ){
 	/**
 	 * Scrolly stuff
 	 */
-	//width = width = $( window ).innerWidth();
-	var waypoint = new Waypoint({
-		element: $( '#content-menu' ),
-		handler: function(direction)
-		{
-			if ( direction == 'down' && $( window ).innerWidth() > 940 )
-			{
-	 			$( '#content-menu' ).addClass('content-menu-fixed');
-	 			$( '#tiled-top' ).addClass('tiled-top-fixed');
-	 			$( '.bio' ).addClass('bio-fixed');
-	 			$( '.the-content' ).addClass('the-content-fixed');
-	 			$( '.sidebar' ).addClass('sidebar-fixed');
-			}
-			else if( direction == 'up' && $( window ).innerWidth() > 940 )
-			{
-	 			$( '#content-menu' ).removeClass('content-menu-fixed');
-	 			$( '#tiled-top' ).removeClass('tiled-top-fixed');
-	 			$( '.bio' ).removeClass('bio-fixed');
-	 			$( '.the-content' ).removeClass('the-content-fixed');
-	 			$( '.sidebar' ).removeClass('sidebar-fixed');
-			}
-		},
-		offset: 65 
-	});
+	// var waypoint = new Waypoint({
+	// 	element: $( '#content-menu' ),
+	// 	handler: function(direction)
+	// 	{
+	// 		if ( direction == 'down' && $( window ).innerWidth() > 940 )
+	// 		{
+	//  			$( '#content-menu' ).addClass('content-menu-fixed');
+	//  			$( '#tiled-top' ).addClass('tiled-top-fixed');
+	//  			$( '.bio' ).addClass('bio-fixed');
+	//  			$( '.the-content' ).addClass('the-content-fixed');
+	//  			$( '.sidebar' ).addClass('sidebar-fixed');
+	// 		}
+	// 		else if( direction == 'up' && $( window ).innerWidth() > 940 )
+	// 		{
+	//  			$( '#content-menu' ).removeClass('content-menu-fixed');
+	//  			$( '#tiled-top' ).removeClass('tiled-top-fixed');
+	//  			$( '.bio' ).removeClass('bio-fixed');
+	//  			$( '.the-content' ).removeClass('the-content-fixed');
+	//  			$( '.sidebar' ).removeClass('sidebar-fixed');
+	// 		}
+	// 	},
+	// 	offset: 65 
+	// });
 
 	/**
 	 * Social stuff
