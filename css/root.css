@@ -54,7 +54,7 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	background: #f5f8fa;
 	color: #292f33;
-	overflow-y: scroll;
+	/*overflow-y: scroll;*/
 }
 
 .page-wrapper {
