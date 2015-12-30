@@ -50,6 +50,25 @@ if ( have_posts() ) :
 				<?php
 				}
 				?>
+
+				<?php
+				// Openclipart link?
+				$url = corenominal_openclipart_link( $post->ID );
+				if( $url != '' )
+				{
+				?>
+				<div class="doodle-openclipart-link" data-url="<?php echo $url; ?>">
+					<a class="notmagnific" href="<?php echo $url; ?>" target="_blank">
+						<img src="<?php echo get_template_directory_uri() . '/img/openclipart-link.svg' ?>" alt="Openclipart">
+						<div class="doodle-openclipart-copy">
+							<h4>Openclipart Doodle</h4>
+							<p>This doodle is available in various formats on Openclipart. Click here to visit the Openclipart page.</p>
+						</div>
+					</a>
+				</div>
+				<?php
+				}
+				?>
 			</div>
 
 			<footer>

@@ -8,7 +8,7 @@ jQuery( document ).ready( function( $ )
 	// Give doodles a lightbox class
 	$('.doodle a img').each(function()
 	{
-		$( this ).parent('a').addClass( 'magnificPopup' );
+		$( this ).parent('a:not(.notmagnific)').addClass( 'magnificPopup' );
 	});
  
 

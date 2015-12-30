@@ -196,3 +196,12 @@ function corenominal_doodle_pattern( $postid )
 	$pattern = get_post_custom_values('doodle_pattern', $postid);
 	return $pattern[0];
 }
+
+/**
+ * Return the openclipart link
+ */
+function corenominal_openclipart_link( $postid )
+{
+	$the_link = get_post_custom_values('openclipart_link', $postid);
+	return $the_link[0];
+}
