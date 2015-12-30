@@ -32,6 +32,24 @@ if ( have_posts() ) :
 		
 			<div class="e-content">
 				<?php the_content() ?>
+
+				<?php
+				// Repeating pattern?
+				if( corenominal_doodle_pattern( $post->ID ) == 'true' )
+				{
+					$tile = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' );
+					$tile = $tile[0];
+				?>
+				<div class="doodle-tile-link" data-tile="<?php echo $tile; ?>">
+					<img src="<?php echo get_template_directory_uri() . '/img/tile-link.svg' ?>" alt="Tile the doodle">
+					<div class="doodle-tile-copy">
+						<h4>Tile Preview</h4>
+						<p>This doodle is a repeating pattern. Click here to see a preview.</p>
+					</div>
+				</div>
+				<?php
+				}
+				?>
 			</div>
 
 			<footer>

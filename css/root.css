@@ -304,6 +304,52 @@ pre code {
 	white-space:pre;
 }
 
+.doodle-tile-link {
+	position:relative;
+	background: #222;
+	color: #fff;
+	cursor: pointer;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.doodle-tile-link:hover {
+	background: #f6271a;
+	color: #fff;
+}
+
+.doodle-tile-link img {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.doodle-tile-copy {
+	margin-left: 70px;
+}
+
+.doodle-tile-copy h4 {
+	font-size: 18px;
+	margin-bottom: 6px;
+}
+
+.doodle-tile-copy p {
+	margin-bottom: 0;
+}
+
+.doodle-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #222;
+	z-index: 9000;
+	display:none;
+	cursor: pointer;
+}
+
 .post footer {
 	color: #8899A6;
 	border-top: 1px solid #e1e8ed;
@@ -710,4 +756,9 @@ pre code {
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
 	border: 0;
+}
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
 }

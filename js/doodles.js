@@ -30,4 +30,39 @@ jQuery( document ).ready( function( $ )
 
 	});
 
+	// Pattern Preview
+	$(document).on('click','.doodle-tile-link',function()
+	{
+		var tile = $(this).attr('data-tile');
+		var overlay = '<div class="doodle-overlay">' +
+					  'foo' +
+					  '</div>';
+		$('body').append(overlay);
+		$( '.doodle-overlay' ).css( 'background-image', 'url("' + tile + '")' );
+		$('.doodle-overlay').fadeIn();
+		$('body').addClass('stop-scrolling');
+	});
+
+	$(document).on('click','.doodle-overlay',function()
+	{
+		$(this).fadeOut('slow', function()
+    	{
+    		$(this).remove();
+    		$('body').removeClass('stop-scrolling');
+    	});
+	});
+
+	$('body').keypress(function(e)
+	{
+	    key = e.keyCode || e.which;
+	    if( key == 27 && $('.doodle-overlay').length )
+	    {
+	        $('.doodle-overlay').fadeOut('slow', function()
+        	{
+        		$(this).remove();
+        		$('body').removeClass('stop-scrolling');
+        	});
+	    }
+	});
+
 });

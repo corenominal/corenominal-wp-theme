@@ -187,3 +187,12 @@ function corenominal_metabox_openclipart_link_save( $post_id )
 
 }
 add_action( 'save_post', 'corenominal_metabox_openclipart_link_save' );
+
+/**
+ * Test if repeating pattern
+ */
+function corenominal_doodle_pattern( $postid )
+{
+	$pattern = get_post_custom_values('doodle_pattern', $postid);
+	return $pattern[0];
+}
