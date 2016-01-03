@@ -57,10 +57,10 @@ if ( have_posts() ) :
 				if( $url != '' )
 				{
 				?>
-				<div class="doodle-openclipart-link" data-url="<?php echo $url; ?>">
+				<div class="doodle-asset-link" data-url="<?php echo $url; ?>">
 					<a class="notmagnific" href="<?php echo $url; ?>" target="_blank">
 						<img src="<?php echo get_template_directory_uri() . '/img/openclipart-link.svg' ?>" alt="Openclipart">
-						<div class="doodle-openclipart-copy">
+						<div class="doodle-asset-copy">
 							<h4>Openclipart Doodle</h4>
 							<p>This doodle is available in various formats on Openclipart. Click here to visit the Openclipart page.</p>
 						</div>
@@ -69,6 +69,23 @@ if ( have_posts() ) :
 				<?php
 				}
 				?>
+
+				<?php
+				// Download link
+				$file = get_attached_file( get_post_thumbnail_id(), 'full' );
+				$upload_dir = wp_upload_dir();
+				$upload_dir = $upload_dir["basedir"];
+				$file = str_replace( $upload_dir, '', $file );
+				?>
+				<div class="doodle-asset-link">
+					<a class="notmagnific" href="<?php echo site_url( 'api' ) . '?method=doodle_download&file=' . $file; ?>">
+						<img src="<?php echo get_template_directory_uri() . '/img/doodle-download.svg' ?>" alt="Openclipart">
+						<div class="doodle-asset-copy">
+							<h4>Download Doodle</h4>
+							<p>Unless otherwise stated, all my doodles are available for free under a <a href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial license</a>.</p>
+						</div>
+					</a>
+				</div>
 			</div>
 
 			<footer>
