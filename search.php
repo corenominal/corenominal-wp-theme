@@ -36,25 +36,39 @@ if ( have_posts() ) :
 
 		<article class="h-entry post post-summary">
 
-			<?php if( $post->post_type == 'page' || $post->post_type == 'post' || $post->post_type == 'snippet' ): ?>
-				<h2>
-					<a class="p-name u-url" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
-				</h2>
-			<?php
-			endif;
-			if( $post->post_type == 'link' ):
-			?>
+			<?php if( $post->post_type == 'link' ): ?>
 				<h2>
 					<a class="p-name" href="<?php corenominal_the_link( $post->ID ) ?>" target="_blank">
 						<?php the_title() ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-external-link"></i>
 					</a>
 				</h2>
+			<?php else: ?>
+				<h2>
+					<a class="p-name u-url" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+				</h2>
 			<?php endif; ?>
 		
-			<div class="p-description">
-				<?php the_excerpt() ?>
-			</div>
+			<?php if( $post->post_type == 'doodle' ): ?>
+				
+				<div class="p-description doodle-result">
+					<?php
+					$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' );
+					$thumbnail = $thumbnail[0];
+					?>
+					<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumbnail; ?>" alt="<?php the_title() ?>"></a>
+					<div class="doodle-result-excerpt">
+						<?php the_excerpt() ?>
+					</div>
+				</div>
+			
+			<?php else: ?>
 
+				<div class="p-description">
+					<?php the_excerpt() ?>
+				</div>
+
+			<?php endif; ?>
+			
 			<footer>
 				
 				<p class="meta"><?php echo '<i class="fa fa-calendar"></i> ' . $date . '&nbsp;&nbsp;&nbsp;<i class="fa fa-clock-o"></i> '; the_time() ?></p>
@@ -67,20 +81,25 @@ if ( have_posts() ) :
 					<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 					<p class="meta"><?php the_tags( '<i class="fa fa-tags"></i> <span class="sr-only">Tags: </span>' ) ?></p>
 					<?php endif; ?>
-				<?php
-				endif;
-				if( $post->post_type == 'link' ):
-				?>
+				<?php endif; ?>
+
+				<?php if( $post->post_type == 'link' ): ?>
 					<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 					<p class="meta"><?php corenominal_the_link_tags( $post->ID ) ?></p>
 					<?php endif; ?>
-				<?php
-				endif;
-				if( $post->post_type == 'snippet' ):
-				?>
+				<?php endif; ?>
+				
+				<?php if( $post->post_type == 'snippet' ): ?>
 					<p class="meta"><?php corenominal_the_snippet_languages( $post->ID ) ?></p>
 					<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 					<p class="meta"><?php corenominal_the_snippet_tags( $post->ID ) ?></p>
+					<?php endif; ?>
+				<?php endif; ?>
+
+				<?php if( $post->post_type == 'doodle' ): ?>
+					<p class="meta"><?php corenominal_the_doodle_media( $post->ID ) ?></p>
+					<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
+						<p class="meta"><?php corenominal_the_doodle_tags( $post->ID ) ?></p>
 					<?php endif; ?>
 				<?php endif; ?>
 

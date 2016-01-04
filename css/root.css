@@ -304,6 +304,22 @@ pre code {
 	white-space:pre;
 }
 
+.doodle-result {
+	position: relative;
+	overflow: hidden;
+}
+
+.doodle-result img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.doodle-result-excerpt {
+	margin-left: 180px;
+	min-height: 170px;
+}
+
 .doodle-asset-link,
 .doodle-tile-link {
 	position:relative;
@@ -365,6 +381,7 @@ pre code {
 	color: #8899A6;
 	border-top: 1px solid #e1e8ed;
 	padding-top: 10px;
+	clear: both;
 }
 
 .post footer a {
