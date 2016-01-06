@@ -35,13 +35,16 @@ function disable_emojis_tinymce( $plugins )
  */
 function fix_allcustomposts_pagination($qs)
 {
-    if( !isset( $qs['post_type'] ) && isset($qs['paged']) )
+    if( !isset( $qs['pagename'] ) )
     {
-        $qs['post_type'] = get_post_types($args = array(
-            'public'   => true,
-            '_builtin' => false
-        ));
-        array_push($qs['post_type'],'post');
+        if( !isset( $qs['post_type'] ) && isset( $qs['paged'] ) )
+        {
+            $qs['post_type'] = get_post_types($args = array(
+                'public'   => true,
+                '_builtin' => false
+            ));
+            array_push($qs['post_type'],'post');
+        }
     }
     return $qs;
 }
