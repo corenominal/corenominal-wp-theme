@@ -546,6 +546,10 @@ pre code {
 	color: #8899A6;
 }
 
+.sidebar img {
+	max-width: 100%;
+}
+
 .footer-main {
 	padding-top: 40px;
 	padding-bottom: 40px;
