@@ -131,6 +131,9 @@ if($tile == '')
 				?>
 					<li><i class="fa fa-facebook"></i> <a target="_blank" href="https://facebook.com/<?php echo $facebook; ?>">Friend me on Facebook</a></li>
 				<?php endif; ?>
+				<?php if( is_user_logged_in() ): ?>
+					<li><i class="fa fa-wordpress"></i> <a target="_blank" href="<?php echo site_url('wp-admin'); ?>">WordPress Admin</a></li>
+				<?php endif; ?>
 			</ul>
 		</div>
 	</div>
