@@ -51,8 +51,11 @@ if($tile == '')
 				$published_snippets = $count_posts->publish;
 				$count_posts = wp_count_posts( 'doodle' );
 				$published_doodles = $count_posts->publish;
+
+				$published_all = $published_posts + $published_links + $published_snippets + $published_doodles;
 			?>
-			<li><a <?php if( is_home() ) echo 'class="active"'; ?> href="<?php echo site_url(); ?>">Posts<br><span class="count"><?php echo $published_posts ?></span></a></li>
+			<li><a <?php if( is_home() ) echo 'class="active"'; ?> href="<?php echo site_url(); ?>">All<br><span class="count"><?php echo $published_all ?></span></a></li>
+			<li><a <?php if( is_page_template( 'blog.php' ) ) echo 'class="active"'; ?> href="<?php echo site_url( 'blog' ); ?>">Posts<br><span class="count"><?php echo $published_posts ?></span></a></li>
 			<li><a <?php if( is_post_type_archive( 'link' ) ) echo 'class="active"'; ?> href="<?php echo site_url('link'); ?>">Links<br><span class="count"><?php echo $published_links ?></span></a></li>
 			<li><a <?php if( is_post_type_archive( 'snippet' ) ) echo 'class="active"'; ?> href="<?php echo site_url('snippet'); ?>">Snippets<br><span class="count"><?php echo $published_snippets ?></span></a></li>
 			<?php if ( is_user_logged_in() ): ?>
@@ -65,7 +68,7 @@ if($tile == '')
 <div class="container content-wrapper">
 
 	<div class="bio-wrapper">
-		<div class="bio">
+		<div class="bio <?php if( is_page( 'About' ) ) echo 'about' ?>">
 			
 			<?php
 			$displayname = get_option( 'corenominal_bio_displayname', 'Joe Bloggs' );

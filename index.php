@@ -31,6 +31,17 @@ get_header();
 <div class="the-content">
 
 <?php
+// Set-up the loop
+$post_types = array( 'post', 'link', 'snippet', 'doodle' );
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$args = array(
+	'post_type' 		=> $post_types,
+	'paged' 			=> $paged,
+	'posts_per_page'	=> 10,
+	'show_posts' 		=> 4
+	);
+query_posts( $args );
+
 /**
  * Sanity check
  */
@@ -67,37 +78,8 @@ if ( have_posts() ) :
 			echo '<h1 class="section-title">' . $date . '</h1>';
 			$prev_date = $date;
 		}
-?>
 
-		<article class="h-entry post">
-
-			<h2>
-				<a class="p-name u-url" href="<?php the_permalink(); ?>">
-					<?php the_title() ?>
-				</a>
-			</h2>
-		
-			<div class="e-content">
-				<?php the_content() ?>
-			</div>
-
-			<footer>
-				
-				<p class="meta"><i class="fa fa-clock-o"></i> <span class="sr-only">Posted @</span> <a href="<?php the_permalink(); ?>"><?php the_time() ?></a></p>
-				
-				<?php if( get_option( 'corenominal_show_cats', 'false' ) == 'true' ): ?>
-				<p class="meta"><i class="fa fa-files-o"></i> <span class="sr-only">Filed under: </span> <?php the_category( ' ' ) ?></p>
-				<?php endif; ?>
-				
-				<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
-				<p class="meta"><?php the_tags( '<i class="fa fa-tags"></i> <span class="sr-only">Tags: </span>' ) ?></p>
-				<?php endif; ?>
-			
-			</footer>
-
-		</article>
-		
-		<?php
+		require get_template_directory() . '/post_type-' . $post->post_type . '.php';
 
 		/**
 		 * Only show end section if last post

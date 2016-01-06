@@ -110,7 +110,7 @@ if ( have_posts() ) :
 						<img src="<?php echo get_template_directory_uri() . '/img/doodle-download.svg' ?>" alt="Openclipart">
 						<div class="doodle-asset-copy">
 							<h4>Download Doodle</h4>
-							<p>Unless otherwise stated, all my doodles are available for free under a <a href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial license</a>.</p>
+							<p>Unless otherwise stated, all my doodles are available for free under a Creative Commons Attribution-NonCommercial license.</p>
 						</div>
 					</a>
 				</div>
@@ -123,6 +123,7 @@ if ( have_posts() ) :
 				<?php if( get_option( 'corenominal_show_tags', 'true' ) == 'true' ): ?>
 				<p class="meta"><?php corenominal_the_doodle_tags( $post->ID ) ?></p>
 				<?php endif; ?>
+
 			</footer>
 
 		</article>

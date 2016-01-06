@@ -128,12 +128,13 @@ body {
 .content-menu ul li a {
 	display: block;
 	padding-top: 10px;
-	/*padding-right: 10px;*/
 	padding-bottom: 4px;
-	/*padding-left: 10px;*/
 	border-bottom: 4px solid #fff;
 	text-align: center;
 	color: #8899a6;
+	font-size: 70%;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .content-menu ul li a:hover {
@@ -173,6 +174,12 @@ a:hover {
 }
 
 .bio {
+	display: none;
+	transition: all 0.5s ease;
+}
+
+.bio.about {
+	display: block;
 	transition: all 0.5s ease;
 }
 
@@ -617,11 +624,6 @@ pre code {
 	margin-bottom: 0;
 }
 
-.content-menu ul li a {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
 .bio-wrapper {
 	width:100%;
 	text-align: center;
@@ -723,6 +725,7 @@ pre code {
 		margin-right: 30px;
 		padding-right: 10px;
 		padding-left: 10px;
+		font-size: 100%;
 	}
 
   	.bio-wrapper {
@@ -732,6 +735,7 @@ pre code {
 	}
 	
 	.bio {
+		display: block;
 		margin-top: -200px;
 		margin-right: 20px;
 		width: 208px;
