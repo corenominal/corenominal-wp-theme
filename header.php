@@ -58,9 +58,7 @@ if($tile == '')
 			<li><a <?php if( is_page_template( 'blog.php' ) ) echo 'class="active"'; ?> href="<?php echo site_url( 'blog' ); ?>">Posts<br><span class="count"><?php echo $published_posts ?></span></a></li>
 			<li><a <?php if( is_post_type_archive( 'link' ) ) echo 'class="active"'; ?> href="<?php echo site_url('link'); ?>">Links<br><span class="count"><?php echo $published_links ?></span></a></li>
 			<li><a <?php if( is_post_type_archive( 'snippet' ) ) echo 'class="active"'; ?> href="<?php echo site_url('snippet'); ?>">Snippets<br><span class="count"><?php echo $published_snippets ?></span></a></li>
-			<?php if ( is_user_logged_in() ): ?>
 			<li><a <?php if( is_post_type_archive( 'doodle' ) ) echo 'class="active"'; ?> href="<?php echo site_url('doodle'); ?>">Doodles<br><span class="count"><?php echo $published_doodles ?></span></a></li>
-			<?php endif; ?>
 		</ul>
 	</div>
 </nav>
