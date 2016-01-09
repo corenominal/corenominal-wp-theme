@@ -60,7 +60,7 @@ function corenominal_metadata()
 		$opengraph_image = get_template_directory_uri() . '/img/open-graph-default.png';
 	}
 
-	if( is_home() )
+	if( is_home() || is_archive() )
 	{	
 		if( $twitter == 'true' )
 		{
