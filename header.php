@@ -99,7 +99,7 @@ if($tile == '')
 			if( $location == '' ):
 				$location = 'Planet Earth';
 			endif;
-			echo '<p class="location"><i class="fa fa-map-marker"></i> ' . $location . '</p>';
+			echo '<p class="location"><i class="fa fa-map-marker fa-fw"></i> ' . $location . '</p>';
 			?>			
 
 			<ul class="social-media-accounts">
@@ -108,31 +108,31 @@ if($tile == '')
 				$twitter = get_option( 'corenominal_twitter_username', '' );
 				if( $twitter != '' ):
 				?>
-					<li><i class="fa fa-twitter"></i> <a target="_blank" href="https://twitter.com/<?php echo $twitter; ?>">Follow me on Twitter</a></li>
+					<li><i class="fa fa-twitter fa-fw"></i> <a target="_blank" href="https://twitter.com/<?php echo $twitter; ?>">Follow me on Twitter</a></li>
 				<?php endif; ?>
 				
 				<?php
 				$github = get_option( 'corenominal_github_username', '' );
 				if( $github != '' ):
 				?>
-					<li><i class="fa fa-github"></i> <a target="_blank" href="https://github.com/<?php echo $github; ?>">Follow me on GitHub</a></li>
+					<li><i class="fa fa-github fa-fw"></i> <a target="_blank" href="https://github.com/<?php echo $github; ?>">Follow me on GitHub</a></li>
 				<?php endif; ?>
 
 				<?php
 				$codepen = get_option( 'corenominal_codepen_username', '' );
 				if( $codepen != '' ):
 				?>
-					<li><i class="fa fa-codepen"></i> <a target="_blank" href="https://codepen.io/<?php echo $codepen; ?>">Follow me on CodePen</a></li>
+					<li><i class="fa fa-codepen fa-fw"></i> <a target="_blank" href="https://codepen.io/<?php echo $codepen; ?>">Follow me on CodePen</a></li>
 				<?php endif; ?>
 
 				<?php
 				$facebook = get_option( 'corenominal_facebook_username', '' );
 				if( $facebook != '' ):
 				?>
-					<li><i class="fa fa-facebook"></i> <a target="_blank" href="https://facebook.com/<?php echo $facebook; ?>">Friend me on Facebook</a></li>
+					<li><i class="fa fa-facebook fa-fw"></i> <a target="_blank" href="https://facebook.com/<?php echo $facebook; ?>">Friend me on Facebook</a></li>
 				<?php endif; ?>
 				<?php if( is_user_logged_in() ): ?>
-					<li><i class="fa fa-wordpress"></i> <a target="_blank" href="<?php echo site_url('wp-admin'); ?>">WordPress Admin</a></li>
+					<li><i class="fa fa-wordpress fa-fw"></i> <a target="_blank" href="<?php echo site_url('wp-admin'); ?>">WordPress Admin</a></li>
 				<?php endif; ?>
 			</ul>
 		</div>
