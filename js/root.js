@@ -125,12 +125,62 @@ jQuery( document ).ready( function( $ ){
 	/**
 	 * Social stuff
 	 */
-	function shareTwitter(url, text)
+	$( '.post' ).each(function( i )
+	{
+		// Skip single pages
+		if( $( this).hasClass( 'page' ) )
+		{
+			return;
+		}
+		var url = $( this ).find('.u-url' ).attr( 'href' );
+		var text = $( this ).find('h1' ).text().trim();
+		if( text == '' )
+		{
+			var text = $( this ).find('h2' ).text().trim();
+		}
+		var image = $( 'meta[property="og:image"]' ).attr("content");
+
+		var btn_share = '<div class="btn-share">' +
+						'<i id="fa-share-alt-' + i + '" data-text="' + text + '" data-url="' + url + '" data-image="' + image + '" data-id="' + i + '" class="fa fa-share-alt fa-fw"></i><br>' +
+						'<div id="btn-social-group-' + i + '" class="btn-social-group">' +
+						'<i data-id="' + i + '" class="fa fa-twitter fa-fw shareon-twitter"></i><br>' +
+						'<i data-id="' + i + '" class="fa fa-facebook fa-fw shareon-facebook"></i>' +
+						'</div>' +
+						'</div>';
+		$( this ).append( btn_share );
+	});
+
+	$( document ).on( 'click', '.fa-share-alt', function()
+	{
+		var id = $( this ).attr( 'data-id' );
+		$( '#btn-social-group-' + id ).slideToggle( 'fast' );
+	});
+
+	$( document ).on( 'click', '.shareon-twitter', function()
+	{
+		var id = $( this ).attr( 'data-id' );
+		var text = $( '#fa-share-alt-' + id ).attr( 'data-text' );
+		var url = $( '#fa-share-alt-' + id ).attr( 'data-url' );
+		shareTwitter( url, text );
+		$( '#btn-social-group-' + id ).slideToggle( 'fast' );
+	});
+
+	$( document ).on( 'click', '.shareon-facebook', function()
+	{
+		var id = $( this ).attr( 'data-id' );
+		var text = $( '#fa-share-alt-' + id ).attr( 'data-text' );
+		var url = $( '#fa-share-alt-' + id ).attr( 'data-url' );
+		var image = $( '#fa-share-alt-' + id ).attr( 'data-image' );
+		shareFacebook( url, text, image );
+		$( '#btn-social-group-' + id ).slideToggle( 'fast' );
+	});
+
+	function shareTwitter( url, text )
 	{
 		open('http://twitter.com/share?url=' + url + '&text=' + text, 'tshare', 'height=400,width=550,resizable=1,toolbar=0,menubar=0,status=0,location=0');  
 	}
 
-	function shareFacebook(url, text, image)
+	function shareFacebook( url, text, image )
 	{
 		open('http://facebook.com/sharer.php?s=100&p[url]=' + url + '&p[images][0]=' + image + '&p[title]=' + text, 'fbshare', 'height=380,width=660,resizable=0,toolbar=0,menubar=0,status=0,location=0,scrollbars=0');
 	}

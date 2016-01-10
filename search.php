@@ -39,7 +39,7 @@ if ( have_posts() ) :
 			<?php if( $post->post_type == 'link' ): ?>
 				<h2>
 					<a class="p-name" href="<?php corenominal_the_link( $post->ID ) ?>" target="_blank">
-						<?php the_title() ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-external-link"></i>
+						<?php the_title() ?> <i class="fa fa-external-link"></i>
 					</a>
 				</h2>
 			<?php else: ?>

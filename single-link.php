@@ -28,7 +28,7 @@ if ( have_posts() ) :
 
 			<h1 class="p-name">
 				<a href="<?php corenominal_the_link( $post->ID ) ?>" target="_blank">
-				<?php the_title() ?>&nbsp;&nbsp;&nbsp;<i class="fa fa-external-link"></i>
+				<?php the_title() ?> <i class="fa fa-external-link"></i>
 				</a>
 			</h1>
 		

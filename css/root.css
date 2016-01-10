@@ -220,6 +220,43 @@ a:hover {
 	width:18px;
 }
 
+.post {
+	position: relative;
+}
+
+.btn-share {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: transparent;
+	font-size: 24px;
+	transition: all 0.50s ease;
+}
+
+.btn-share .fa {
+	cursor: pointer;
+	padding:20px;
+}
+
+.btn-share .fa-share-alt {
+	color: #8899a6;
+	border: 1px solid transparent;
+}
+
+.btn-share .fa:hover {
+	color: #46a6f2;
+}
+
+.btn-social-group {
+	background: #fff;
+	border: 1px solid #e1e8ed;
+	color: #8899a6;
+	-webkit-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+	-moz-box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+	box-shadow: 0px -1px 11px 0px rgba(189,189,189,0.66);
+	display: none;
+}
+
 .post,
 .comments {
 	border-radius: 5px;
@@ -234,9 +271,10 @@ a:hover {
 }
 
 .post h1, .post h2 {
-	padding-bottom: 10px;
-	border-bottom: 1px solid #e1e8ed;
+	/*padding-bottom: 10px;*/
+	/*border-bottom: 1px solid #e1e8ed;*/
 	line-height: 1.44em;
+	margin-right: 80px;
 }
 
 .post h1 i, .post h2 i {
