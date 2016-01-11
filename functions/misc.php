@@ -89,6 +89,17 @@ function dd( $data )
 }
 
 /**
+ * Echo array as json
+ */
+function echo_json($data){
+    header('Cache-Control: no-cache, must-revalidate');
+    header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+    header('Content-Type: application/json');
+    echo json_encode($data);
+    exit;
+}
+
+/**
  * Produces select for options
  */
 function corenominal_options_select( $id, $options, $default, $description = '' )
