@@ -20,7 +20,23 @@
 <?php wp_head(); ?>
 </head>
 <body>
+<!--
+War. Seriously, what is it good for?
+====================================
+No, but seriously, for a normal dude like me, there is not much
+that I can do to prevent or stop wars from happening; it's sad
+and frustrating. That said, there is something I can do. I can
+support War Child, a small charity that protects children living
+in the world's most dangerous war zones.
 
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                   +++++++++++++++++++++++++++
+                                   @@@@@@@@@@@@@@@@@@@@@@@@@@@
+Please support War Child too, see: https://www.warchild.org.uk
+                                   @@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                   +++++++++++++++++++++++++++
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
 
 <?php wp_footer() ?>
 
