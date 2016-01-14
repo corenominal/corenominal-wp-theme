@@ -47,11 +47,55 @@ table {
 }
 
 /**
+ * Webfonts
+ */
+@font-face {
+    font-family: 'Transport New Heavy';
+    src: url('fonts/transport/transportnew-heavy-webfont.eot');
+    src: url('fonts/transport/transportnew-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/transport/transportnew-heavy-webfont.woff2') format('woff2'),
+         url('fonts/transport/transportnew-heavy-webfont.woff') format('woff'),
+         url('fonts/transport/transportnew-heavy-webfont.ttf') format('truetype'),
+         url('fonts/transport/transportnew-heavy-webfont.svg#transport_newheavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Transport New Light';
+    src: url('fonts/transport/transportnew-light-webfont.eot');
+    src: url('fonts/transport/transportnew-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/transport/transportnew-light-webfont.woff2') format('woff2'),
+         url('fonts/transport/transportnew-light-webfont.woff') format('woff'),
+         url('fonts/transport/transportnew-light-webfont.ttf') format('truetype'),
+         url('fonts/transport/transportnew-light-webfont.svg#transport_newlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Transport New Medium';
+    src: url('fonts/transport/transportnew-medium-webfont.eot');
+    src: url('fonts/transport/transportnew-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/transport/transportnew-medium-webfont.woff2') format('woff2'),
+         url('fonts/transport/transportnew-medium-webfont.woff') format('woff'),
+         url('fonts/transport/transportnew-medium-webfont.ttf') format('truetype'),
+         url('fonts/transport/transportnew-medium-webfont.svg#transport_newmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/**
  * corenominal
  */
 body {
-	font-size: 16px;
-	font-family: Helvetica, Arial, sans-serif;
+	font-size: 90%;
+	font-family: 'Transport New Light', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	background: #f5f8fa;
 	color: #292f33;
 	overflow-y: scroll;
@@ -191,6 +235,7 @@ a:hover {
 .bio h2 {
 	font-weight: 400;
 	margin-bottom: 6px;
+	font-size: 22px;
 }
 
 .bio h3 {
@@ -275,6 +320,7 @@ a:hover {
 	/*border-bottom: 1px solid #e1e8ed;*/
 	line-height: 1.44em;
 	margin-right: 80px;
+	text-transform: uppercase;
 }
 
 .post h1 i, .post h2 i {
@@ -315,7 +361,7 @@ blockquote {
 	margin-left: 20px;
 	margin-right: 20px;
 	color: #292f33;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.4em;
 }
 
