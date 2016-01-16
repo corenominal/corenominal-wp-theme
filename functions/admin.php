@@ -67,19 +67,19 @@ function corenominal_admin_menu()
 	/**
 	 * Design submenu item
 	 */
-	add_submenu_page( 
-		'corenominal', // parent slug
-		'Design', // page title
-		'Design', // menu title
-		'manage_options', // capability
-		'corenominal_design', // slug
-		'corenominal_design_callback' // callback function
-	 	);
+	// add_submenu_page( 
+	// 	'corenominal', // parent slug
+	// 	'Design', // page title
+	// 	'Design', // menu title
+	// 	'manage_options', // capability
+	// 	'corenominal_design', // slug
+	// 	'corenominal_design_callback' // callback function
+	//  	);
 
 	/**
 	 * Activate bio options 
 	 */
-	add_action( 'admin_init', 'corenominal_design_settings' );
+	// add_action( 'admin_init', 'corenominal_design_settings' );
 
 	/**
 	 * Social media accounts submenu item
