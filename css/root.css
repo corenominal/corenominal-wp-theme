@@ -281,9 +281,8 @@ a:hover {
 	border-bottom: 1px solid #f6271a;
 }
 
-.e-content a img { 
-	border:none;
-	vertical-align: top;
+.e-content a[rel*="attachment"] { 
+	border-bottom: none;
 }
 
 .post h1, .post h2 {
