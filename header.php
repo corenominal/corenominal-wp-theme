@@ -37,7 +37,7 @@ if($tile == '')
 	</div>
 </div>	
 
-<div id="tiled-top" class="tiled-top tiled" data-tile="<?php echo $tile; ?>"></div>
+<div id="stripywipy" class="stripywipy"></div>
 
 <nav id="content-menu" class="content-menu">
 	<div class="container">

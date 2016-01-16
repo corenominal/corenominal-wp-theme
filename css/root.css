@@ -63,8 +63,8 @@ body {
 	position: relative;
 }
 
-.tiled-top {
-	background: #111;
+.stripywipy {
+	background: #fff;
 	width: 100%;
 	height: 60px;
 }
@@ -725,7 +725,7 @@ pre code {
   		display: block;
   	}
 
-  	.tiled-top {
+  	.stripywipy {
 		height: 260px;
 	}
 
