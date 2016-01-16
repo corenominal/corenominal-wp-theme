@@ -438,8 +438,8 @@ pre code {
 
 .post footer {
 	color: #999;
-	border-top: 1px solid #ccc;
-	padding-top: 10px;
+	border-left: 1px solid #ccc;
+	padding-left: 20px;
 	clear: both;
 }
 
