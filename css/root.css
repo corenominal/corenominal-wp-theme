@@ -680,8 +680,16 @@ pre code {
 	line-height: 1.4em;
 }
 
-.bio-img {
+.foo-logo {
+	width: 200px;
+	height: 200px;
+	border: 1px solid #ccc;
+	margin: auto;
 	margin-bottom: 20px;
+	background: #fff;
+}
+
+.bio-img {
 	max-width: 180px;
 	background: #fff;
 	padding: 10px;
@@ -789,10 +797,14 @@ pre code {
 		width: 208px;
 	}
 
+	.foo-logo {
+		margin:0;
+		margin-bottom: 20px;
+	}
+
 	.bio-img {
 		margin:0;
 		margin-bottom: 20px;
-		border: 1px solid #ccc;
 	}
 
   	.container {

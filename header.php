@@ -69,15 +69,19 @@ if($tile == '')
 		<div class="bio <?php if( is_page( 'About' ) ) echo 'about' ?>">
 			
 			<?php
-			$displayname = get_option( 'corenominal_bio_displayname', 'Joe Bloggs' );
-			$bioimg = get_option( 'corenominal_bio_img', '' );
-			if( $bioimg == '' ):
-				$bioimg = get_template_directory_uri() . '/img/default-bio-image.png';
-			endif;
-			echo '<div class="bio-img"><img src="' . $bioimg . '" alt="' . $displayname . '"></div>';
+			// $displayname = get_option( 'corenominal_bio_displayname', 'Joe Bloggs' );
+			// $bioimg = get_option( 'corenominal_bio_img', '' );
+			// if( $bioimg == '' ):
+			// 	$bioimg = get_template_directory_uri() . '/img/default-bio-image.png';
+			// endif;
+			// echo '<div class="bio-img"><img src="' . $bioimg . '" alt="' . $displayname . '"></div>';
 			
-			echo '<h2>' . $displayname . '</h2>';
+			// echo '<h2>' . $displayname . '</h2>';
 			?>
+
+			<div id="foo-logo-wrapper" class="foo-logo"></div>
+
+			<h2><?php echo get_option( 'corenominal_bio_displayname', 'Joe Bloggs' ); ?></h2>
 
 			<?php
 			$twitter = get_option( 'corenominal_twitter_username', '' );

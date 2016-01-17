@@ -92,6 +92,80 @@ function doTheStripyWipy()
 }
 
 /**
+ * Foo logo
+ */
+function foologo()
+{
+	var wrapper = document.getElementById('foo-logo-wrapper');
+	wrapper.innerHTML += '<canvas id="foo-logo" width="200" height="200"></canvas>';
+	var canvas = document.getElementById('foo-logo');
+	var c = canvas.getContext('2d');
+	var interval = 1;
+
+	c.fillStyle = 'rgba(255, 255, 255, 1)';
+	c.fillRect(0,0,200,200);
+
+	var render = function()
+	{
+		
+		c.fillStyle = 'rgba(255, 255, 255, 1)';
+		c.fillRect(0,0,200,200);
+		for(y = 20; y <= 160; y = y + 20)
+		{
+			for(x = 20; x <= 160; x = x + 20)
+			{
+				r = Math.floor((Math.random() * 3) + 1);
+				switch(r)
+				{
+					case 1:
+						c.fillStyle = 'rgba(17, 17, 17, 1)';
+						break;
+					case 2:
+						c.fillStyle = 'rgba(255, 255, 255, 1)';
+						break;
+					default:
+						c.fillStyle = 'rgba(255, 255, 255, 1)';
+						break;
+				}
+				c.fillRect(x,y,20,20);
+			}
+		}
+	}
+
+	var main = function()
+	{
+		render();
+		
+		if(interval < 50)
+		{
+			interval = interval + 1;
+		}
+		else if(interval < 100)
+		{
+			interval = interval + 10;
+		}
+		else if(interval < 150)
+		{
+			interval = interval + 20;
+		}
+		else
+		{
+			interval = interval + 100;
+		}
+
+		if(interval < 400)
+		{
+			setTimeout(function()
+			{
+				main();
+			}, interval);
+		}
+	}
+
+	main();
+}
+
+/**
  * For Search UX, sets character position in given element
  */
 $.fn.selectRange = function(start, end) {
@@ -293,4 +367,9 @@ jQuery( document ).ready( function( $ ){
 	        doTheStripyWipy();
 	    }               
 	}
+
+	/**
+	 * Call the foologo function
+	 */
+	foologo();
 });
