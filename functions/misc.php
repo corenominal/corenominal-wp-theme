@@ -89,6 +89,19 @@ function dd( $data )
 }
 
 /**
+ * Test for AJAX request
+ * Note: can be forged fairly easily
+ */
+function is_ajax()
+{
+    if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
+    {
+        return true;
+    }
+    return false;
+}
+
+/**
  * Echo array as json
  */
 function echo_json($data){

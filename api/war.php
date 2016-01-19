@@ -5,7 +5,7 @@
 
 if( !isset($data['action']) )
 {
-	die( 'Error: invalid action' );
+	die( 'Error: no action provided' );
 }
 
 switch ( $data['action'] )
@@ -15,11 +15,7 @@ switch ( $data['action'] )
 		break;
 
 	case 'insert':
-		insert();
-		break;
-
-	case 'foo':
-		foo( $data );
+		insert( $data );
 		break;
 	
 	default:
@@ -41,9 +37,11 @@ function stats()
 /**
  * Insert the results of a battle
  */ 
-function insert()
+function insert( $data )
 {
-	//TODO - needs some sort of sanity check here
+	// Test for valid AJAX request
+	if ( !is_ajax() ) die( 'Error: missing AJAX request' );
+
 	global $wpdb;
 	$wpdb->insert( 
 		'demo_war_log', 
@@ -66,9 +64,6 @@ function insert()
 		) 
 	);
 
-}
-
-function foo( $data )
-{
 	echo_json( $data );
+
 }
