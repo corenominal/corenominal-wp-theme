@@ -17,6 +17,7 @@ jQuery( document ).ready( function( $ ){
 
 	// Test payload
 	var payload = {
+		'security': $( '#security' ).val(),
 		'method' : 'war',
 		'action' : 'insert',
 		'circles_to_battle' : 777,

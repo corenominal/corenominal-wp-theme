@@ -39,9 +39,9 @@ function stats()
  */ 
 function insert( $data )
 {
-	// Test for valid AJAX request
-	if ( !is_ajax() ) die( 'Error: missing AJAX request' );
-
+	if( !check_ajax_referer( 'war--what-is-it-good-for', 'security', false ) ) 
+		die( 'Error: invalid credentials' );
+	
 	global $wpdb;
 	$wpdb->insert( 
 		'demo_war_log', 

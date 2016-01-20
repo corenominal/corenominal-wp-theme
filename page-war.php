@@ -38,6 +38,8 @@ Please support War Child too, see: https://www.warchild.org.uk
                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 
+<input id="security" type="hidden" value="<?php echo wp_create_nonce( "war--what-is-it-good-for" );?>">
+
 <?php wp_footer() ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
