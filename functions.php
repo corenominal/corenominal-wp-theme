@@ -25,11 +25,6 @@ require get_template_directory() . '/functions/misc.php';
 require get_template_directory() . '/functions/shortcodes.php';
 
 /**
- * Metadata function, twitter cards, open graph etc.
- */
-require get_template_directory() . '/functions/metadata.php';
-
-/**
  * Theme admin stuff.
  */
 require get_template_directory() . '/functions/admin.php';
