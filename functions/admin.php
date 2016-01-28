@@ -98,23 +98,6 @@ function corenominal_admin_menu()
 	 */
 	add_action( 'admin_init', 'corenominal_social_settings' );
 
-	/**
-	 * API key submenu item
-	 */
-	add_submenu_page( 
-		'corenominal', // parent slug
-		'API Key', // page title
-		'API Key', // menu title
-		'manage_options', // capability
-		'corenominal_apikey', // slug
-		'corenominal_apikey_callback' // callback function
-	 	);
-
-	/**
-	 * Activate apikey options 
-	 */
-	add_action( 'admin_init', 'corenominal_apikey_settings' );
-
 }
 add_action( 'admin_menu', 'corenominal_admin_menu' );
 
@@ -137,8 +120,3 @@ require get_template_directory() . '/functions/views/admin_corenominal_design.ph
  * corenominal_social_callback()
  */
 require get_template_directory() . '/functions/views/admin_corenominal_social.php';
-
-/**
- * corenominal_apikey_callback()
- */
-require get_template_directory() . '/functions/views/admin_corenominal_apikey.php';

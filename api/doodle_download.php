@@ -38,5 +38,5 @@ header("Cache-Control: private");
 header("Content-Type: application/stream");
 header("Content-Length: ".$file_size);
 header("Content-Disposition: attachment; filename=".$file_name);
-readfile ($file);                   
+readfile ($file);
 exit();
