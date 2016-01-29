@@ -2,14 +2,6 @@
 /**
  * Custom post types and taxonomies
  */
-require get_template_directory() . '/functions/custom_post_type_link.php';
-require get_template_directory() . '/functions/custom_taxonomy_link_tag.php';
-require get_template_directory() . '/functions/custom_post_type_snippet.php';
-require get_template_directory() . '/functions/custom_taxonomy_snippet_tag.php';
-require get_template_directory() . '/functions/custom_taxonomy_snippet_language.php';
-require get_template_directory() . '/functions/custom_post_type_doodle.php';
-require get_template_directory() . '/functions/custom_taxonomy_doodle_medium.php';
-require get_template_directory() . '/functions/custom_taxonomy_doodle_tag.php';
 
 /**
  * Theme's admin menu
