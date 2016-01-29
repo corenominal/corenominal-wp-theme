@@ -323,6 +323,10 @@ em {
 	font-style: italic;
 }
 
+strong {
+	font-weight: bold;
+}
+
 blockquote {
 	border-left: 4px solid #ccc;
 	padding-left: 20px;
