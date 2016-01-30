@@ -20,11 +20,6 @@ require get_template_directory() . '/functions/menus.php';
 require get_template_directory() . '/functions/misc.php';
 
 /**
- * Include custom shortcodes.
- */
-require get_template_directory() . '/functions/shortcodes.php';
-
-/**
  * Theme admin stuff.
  */
 require get_template_directory() . '/functions/admin.php';
