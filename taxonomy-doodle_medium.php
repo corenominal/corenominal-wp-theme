@@ -85,7 +85,7 @@ if ( have_posts() ) :
 				$file = str_replace( $upload_dir, '', $file );
 				?>
 				<div class="doodle-asset-link">
-					<a class="notmagnific" href="<?php echo site_url( 'api' ) . '?method=doodle_download&file=' . $file; ?>">
+					<a class="notmagnific" href="<?php echo site_url( 'wp-json/corenominal/doodle_download' ) . '?file=' . $file; ?>">
 						<img src="<?php echo get_template_directory_uri() . '/img/doodle-download.svg' ?>" alt="Openclipart">
 						<div class="doodle-asset-copy">
 							<h4>Download Doodle</h4>
