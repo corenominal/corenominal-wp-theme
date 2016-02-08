@@ -27,7 +27,7 @@ function unified_feed( $qv )
 {
     if ( isset($qv['feed'] ) && !isset ($qv['post_type']) )
     {
-        $qv['post_type'] = array('post', 'link', 'snippet', 'doodle');
+        $qv['post_type'] = array('post', 'link', 'snippet');
     }
     return $qv;
 }
