@@ -125,8 +125,11 @@ jQuery( document ).ready( function( $ ){
 	    {	    
 	      var text = $( this ).html().replace( icon, '' );
 	      text = text.trim().split(' ');
+	      if( text.length > 1 )
+	      {
 	      var last = text.pop();
 	      return text.join(" ") + (text.length > 0 ? ' <span class="nowrap">' + last + ' ' + icon + '</span>' : last);
+	      }
 	    }
 	});
 
