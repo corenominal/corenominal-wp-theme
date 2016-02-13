@@ -75,24 +75,4 @@ if ( function_exists( 'register_sidebar' ) ) {
 		'after_title'   => '</h4>'
 	) );
 
-	register_sidebar( array(
-		'name' => 'Doodle Sidebar - Archives',
-		'id'   => 'corenominal-doodle-sidebar-archives-widget',
-		'description'   => 'The sidebar which appears when viewing doodle archive templates.',
-		'before_widget' => '<div id="%1$s" class="aside widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
-	) );
-
-	register_sidebar( array(
-		'name' => 'Doodle Sidebar - Single',
-		'id'   => 'corenominal-doodle-sidebar-single-widget',
-		'description'   => 'The sidebar which appears when viewing a single doodle post.',
-		'before_widget' => '<div id="%1$s" class="aside widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
-	) );
-
 }

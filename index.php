@@ -32,7 +32,7 @@ get_header();
 
 <?php
 // Set-up the loop
-$post_types = array( 'post', 'link', 'snippet', 'doodle' );
+$post_types = array( 'post', 'link', 'snippet' );
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $args = array(
 	'post_type' 		=> $post_types,
