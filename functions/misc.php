@@ -1,39 +1,5 @@
 <?php
 /**
- * Fix pagination for custom loop showing all
- * custom post types.
- */
-function fix_allcustomposts_pagination($qs)
-{
-    if( !isset( $qs['pagename'] ) )
-    {
-        if( !isset( $qs['post_type'] ) && isset( $qs['paged'] ) )
-        {
-            $qs['post_type'] = get_post_types($args = array(
-                'public'   => true,
-                '_builtin' => false
-            ));
-            array_push($qs['post_type'],'post');
-        }
-    }
-    return $qs;
-}
-add_filter('request', 'fix_allcustomposts_pagination');
-
-/**
- * Include all custom posts types in main feed
- */
-function unified_feed( $qv )
-{
-    if ( isset($qv['feed'] ) && !isset ($qv['post_type']) )
-    {
-        $qv['post_type'] = array('post', 'link', 'snippet');
-    }
-    return $qv;
-}
-add_filter( 'request', 'unified_feed' );
-
-/**
  * Add thumbnail/featued image support
  */
 add_theme_support( 'post-thumbnails' );
